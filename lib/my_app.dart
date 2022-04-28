@@ -1,15 +1,36 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:megatech/constant/app_string.dart';
+import 'package:megatech/constant/image_string.dart';
 import 'package:megatech/constant/route_string.dart';
 import 'package:megatech/navigation/route_aware.dart';
 import 'package:megatech/navigation/route_generator.dart';
 import 'package:megatech/theme/app_theme.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    scheduleMicrotask((){
+      precacheImage(ImageString.splash, context);
+      precacheImage(ImageString.logo, context);
+      precacheImage(ImageString.demo, context);
+      precacheImage(ImageString.home, context);
+      precacheImage(ImageString.setting, context);
+      precacheImage(ImageString.menu, context);
+      precacheImage(ImageString.fuelManagement, context);
+
+    });
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

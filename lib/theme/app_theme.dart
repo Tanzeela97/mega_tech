@@ -9,6 +9,7 @@ abstract class AppTheme{
 ThemeData _mainTheme = ThemeData(
   brightness: Brightness.light,
   textTheme:  GoogleFonts.barlowCondensedTextTheme()
+ //   textTheme:  GoogleFonts.indieFlowerTextTheme()
   //appBarTheme: const AppBarTheme(color: AppColor.transparent),
 );
 ThemeData _darkTheme = ThemeData(

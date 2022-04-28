@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:megatech/constant/route_string.dart';
+import 'package:megatech/presentation/boarding_view/boarding_view.dart';
+import 'package:megatech/presentation/main_layout.dart';
+import 'package:megatech/presentation/menu/home_view/fuel/fuel_view.dart';
+import 'package:megatech/presentation/menu/menu_view.dart';
+import 'package:megatech/presentation/signIn_view/signIn_view.dart';
+
 import 'package:megatech/presentation/splash_view/splash_view.dart';
 
 class RouteGenerator {
@@ -9,7 +15,13 @@ class RouteGenerator {
 
     switch (settings.name) {
       case RouteString.initial:
+        //return MaterialPageRoute(builder: (_) => const MainLayout());
+      //  return MaterialPageRoute(builder: (_) => const BoardingView());
         return MaterialPageRoute(builder: (_) => const SplashView());
+      case RouteString.layout:
+        return MaterialPageRoute(builder: (_) => const MainLayout());
+      case RouteString.fuel:
+        return MaterialPageRoute(builder: (_) => const FuelMonitoring());
       // case '/second':
       // // Validation of correct data type
       //   if (args is String) {
