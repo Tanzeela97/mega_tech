@@ -14,12 +14,23 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const CategoryBox(
-          imageProvider: ImageString.fuelManagement,
+    return Wrap(
+      alignment: WrapAlignment.center,
+      children:const [
+         CategoryBox(
+          imageProvider: ImageString.fuelTwo,
           string: AppString.fuel,
           routeString: RouteString.fuel,
+        ),
+         CategoryBox(
+          imageProvider: ImageString.leave,
+          string: AppString.appliedLeave,
+          routeString: RouteString.appliedLeave,
+        ),
+         CategoryBox(
+          imageProvider: ImageString.feedback,
+          string: AppString.feedback,
+          routeString: RouteString.feedback,
         ),
       ],
     );
@@ -43,8 +54,8 @@ class CategoryBox extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          width: 100,
-          height: 100,
+          width: 80,
+          height: 80,
           child: IconButton(
               onPressed: routeString != null ? () {
                 Navigator.pushNamed(context, routeString!);

@@ -4,4 +4,6 @@ abstract class RouteString{
   static const login = '/login';
   static const layout = '/layout';
   static const fuel = '/fuel';
+  static const appliedLeave = '/appliedLeave';
+  static const feedback = '/feedback';
 }

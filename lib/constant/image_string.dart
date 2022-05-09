@@ -12,4 +12,7 @@ abstract class ImageString{
   static const ImageProvider fuelManagement = AssetImage('assets/fuel_management.png');
   static const ImageProvider fuelTwo = AssetImage('assets/fuel_two.png');
   static const ImageProvider fuelGauge = AssetImage('assets/fuel_gauge.png');
+  static const ImageProvider currentPosition = AssetImage('assets/current_position.png');
+  static const ImageProvider feedback = AssetImage('assets/feedback.png');
+  static const ImageProvider leave = AssetImage('assets/leave.png');
 }

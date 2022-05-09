@@ -13,8 +13,16 @@ abstract class AppString{
   static const privacyPolicy = 'Privacy Policy';
   static const termAndCondition = 'Term & Condition';
   static const fuel = 'fuel';
+  static const currentPosition = 'Current Position';
   static const fuelMonitoring = 'Fuel Monitoring';
   static const showw = 'Show';
   static const from = 'from :';
   static const to = 'to :';
+  static const appliedLeave = 'Applied Leave';
+  static const leaveApplication = 'Leave Application';
+  static const feedback = 'Feedback';
+  static const userFeedback = 'User Feedback';
+  static const viewAll = 'View All';
+  static const saveFeedback = 'Save Feedback';
+  static const yourFeedbackHere = 'Your Feedback Here';
 }

@@ -20,7 +20,7 @@ class _MainLayoutState extends State<MainLayout>
   @override
   void initState() {
     animationController = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 800));
+        vsync: this, duration: const Duration(milliseconds: 500));
     animation = Tween(begin: 1.0, end: 0.69).animate(animationController);
     animationController.addListener(() {});
     //animationController.forward();
@@ -38,7 +38,7 @@ class _MainLayoutState extends State<MainLayout>
     return Scaffold(
       body: Stack(
         children: [
-          const DrawerScreen(),
+          DrawerScreen(animationController: animationController),
           MenuView(
               animationController: animationController, animation: animation),
         ],
@@ -48,7 +48,10 @@ class _MainLayoutState extends State<MainLayout>
 }
 
 class DrawerScreen extends StatelessWidget {
-  const DrawerScreen({Key? key}) : super(key: key);
+  final AnimationController animationController;
+
+  const DrawerScreen({Key? key, required this.animationController})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +60,17 @@ class DrawerScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
-          Container(height: 250, color: AppColor.blue),
+          Container(
+            width: double.infinity,
+            height: 250,
+            alignment: Alignment.centerLeft,
+            color: AppColor.blue,
+            child: IconButton(
+                onPressed: () {
+                  animationController.reverse();
+                },
+                icon: const Icon(Icons.close)),
+          ),
           ListTile(
               leading: const Icon(Icons.animation),
               title: const KText(AppString.aboutUs),

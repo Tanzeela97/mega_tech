@@ -62,7 +62,9 @@ class _HomePageState extends State<MenuView> {
         valueListenable: indexNotifier,
         builder: (context, value, child) => Scaffold(
             appBar: KAppBar(actions: [
-              IconButton(onPressed: (){}, icon: const Image(image: ImageString.menu)),
+              IconButton(onPressed: (){
+                widget.animationController.forward();
+              }, icon: const Image(image: ImageString.menu)),
             ]),
             bottomNavigationBar: Theme(
               data: Theme.of(context).copyWith(canvasColor: AppColor.blue),
@@ -70,13 +72,13 @@ class _HomePageState extends State<MenuView> {
                 type: BottomNavigationBarType.fixed,
                 items: const <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
-                      icon: Image(image: ImageString.demo, height: 24),
+                      icon: Icon(Icons.phonelink_setup_outlined,size: 24.0),
                       label: AppString.demo),
                   BottomNavigationBarItem(
-                      icon: Image(image: ImageString.home, height: 24),
+                      icon: Icon(Icons.home_outlined,size: 24.0),
                       label: AppString.home),
                   BottomNavigationBarItem(
-                      icon: Image(image: ImageString.setting, height: 24),
+                      icon: Icon(Icons.settings_outlined,size: 24.0),
                       label: AppString.setting),
                 ],
                 currentIndex: value,
