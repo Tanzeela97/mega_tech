@@ -14,23 +14,78 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      children:const [
-         CategoryBox(
+    // return Wrap(
+    //   alignment: WrapAlignment.center,
+    //   children: const [
+    //     CategoryBox(
+    //       imageProvider: ImageString.fuelTwo,
+    //       string: AppString.fuel,
+    //       routeString: RouteString.fuel,
+    //     ),
+    //     CategoryBox(
+    //       imageProvider: ImageString.leave,
+    //       string: AppString.appliedLeave,
+    //       routeString: RouteString.appliedLeave,
+    //     ),
+    //     CategoryBox(
+    //       imageProvider: ImageString.feedback,
+    //       string: AppString.feedback,
+    //       routeString: RouteString.feedback,
+    //     ),
+    //     CategoryBox(
+    //       imageProvider: ImageString.info,
+    //       string: AppString.preInfo,
+    //       routeString: RouteString.preInfo,
+    //     ),
+    //     CategoryBox(
+    //       imageProvider: ImageString.market,
+    //       string: AppString.marketObservation,
+    //       routeString: RouteString.marketObservation,
+    //     ),
+    //     CategoryBox(
+    //       imageProvider: ImageString.gps,
+    //       string: AppString.currentPosition,
+    //       routeString: RouteString.currentPosition,
+    //     ),
+    //     CategoryBox(
+    //       imageProvider: ImageString.gps,
+    //       string: AppString.currentPosition,
+    //       routeString: RouteString.currentPosition,
+    //     ),
+    //   ],
+    // );
+    return GridView.count(
+      crossAxisCount: 3,
+      children: const [
+        CategoryBox(
           imageProvider: ImageString.fuelTwo,
           string: AppString.fuel,
           routeString: RouteString.fuel,
         ),
-         CategoryBox(
+        CategoryBox(
           imageProvider: ImageString.leave,
           string: AppString.appliedLeave,
           routeString: RouteString.appliedLeave,
         ),
-         CategoryBox(
+        CategoryBox(
           imageProvider: ImageString.feedback,
           string: AppString.feedback,
           routeString: RouteString.feedback,
+        ),
+        CategoryBox(
+          imageProvider: ImageString.info,
+          string: AppString.preInfo,
+          routeString: RouteString.preInfo,
+        ),
+        CategoryBox(
+          imageProvider: ImageString.market,
+          string: AppString.marketObservation,
+          routeString: RouteString.marketObservation,
+        ),
+        CategoryBox(
+          imageProvider: ImageString.gps,
+          string: AppString.currentPosition,
+          routeString: RouteString.currentPosition,
         ),
       ],
     );
@@ -57,9 +112,11 @@ class CategoryBox extends StatelessWidget {
           width: 80,
           height: 80,
           child: IconButton(
-              onPressed: routeString != null ? () {
-                Navigator.pushNamed(context, routeString!);
-              } : null,
+              onPressed: routeString != null
+                  ? () {
+                      Navigator.pushNamed(context, routeString!);
+                    }
+                  : null,
               icon: Image(image: imageProvider)),
         ),
         KText(string),

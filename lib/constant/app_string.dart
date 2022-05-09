@@ -25,4 +25,13 @@ abstract class AppString{
   static const viewAll = 'View All';
   static const saveFeedback = 'Save Feedback';
   static const yourFeedbackHere = 'Your Feedback Here';
+  static const preInfo = 'Pre-Info';
+  static const infoRemarks = 'Info Remarks';
+  static const marketObservation = 'Market Observation';
+  static const shop = 'Shop:';
+  static const town = 'Town:';
+  static const observation = 'Observation';
+  static const save = 'Save';
+
+
 }
