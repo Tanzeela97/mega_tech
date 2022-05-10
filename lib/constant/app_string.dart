@@ -32,6 +32,9 @@ abstract class AppString{
   static const town = 'Town:';
   static const observation = 'Observation';
   static const save = 'Save';
+  static const leave = 'Leave';
+  static const reason = 'Reason';
+  static const selectedVehicle = 'Selected Vehicle';
 
 
 }

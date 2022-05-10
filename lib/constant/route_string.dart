@@ -9,4 +9,5 @@ abstract class RouteString{
   static const preInfo = '/preInfo';
   static const marketObservation = '/marketObservation';
   static const currentPosition = '/currentPosition';
+  static const leave = '/leave';
 }

@@ -14,46 +14,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    // return Wrap(
-    //   alignment: WrapAlignment.center,
-    //   children: const [
-    //     CategoryBox(
-    //       imageProvider: ImageString.fuelTwo,
-    //       string: AppString.fuel,
-    //       routeString: RouteString.fuel,
-    //     ),
-    //     CategoryBox(
-    //       imageProvider: ImageString.leave,
-    //       string: AppString.appliedLeave,
-    //       routeString: RouteString.appliedLeave,
-    //     ),
-    //     CategoryBox(
-    //       imageProvider: ImageString.feedback,
-    //       string: AppString.feedback,
-    //       routeString: RouteString.feedback,
-    //     ),
-    //     CategoryBox(
-    //       imageProvider: ImageString.info,
-    //       string: AppString.preInfo,
-    //       routeString: RouteString.preInfo,
-    //     ),
-    //     CategoryBox(
-    //       imageProvider: ImageString.market,
-    //       string: AppString.marketObservation,
-    //       routeString: RouteString.marketObservation,
-    //     ),
-    //     CategoryBox(
-    //       imageProvider: ImageString.gps,
-    //       string: AppString.currentPosition,
-    //       routeString: RouteString.currentPosition,
-    //     ),
-    //     CategoryBox(
-    //       imageProvider: ImageString.gps,
-    //       string: AppString.currentPosition,
-    //       routeString: RouteString.currentPosition,
-    //     ),
-    //   ],
-    // );
+
     return GridView.count(
       crossAxisCount: 3,
       children: const [
@@ -63,7 +24,7 @@ class _HomeState extends State<Home> {
           routeString: RouteString.fuel,
         ),
         CategoryBox(
-          imageProvider: ImageString.leave,
+          imageProvider: ImageString.appliedLeave,
           string: AppString.appliedLeave,
           routeString: RouteString.appliedLeave,
         ),
@@ -78,15 +39,17 @@ class _HomeState extends State<Home> {
           routeString: RouteString.preInfo,
         ),
         CategoryBox(
-          imageProvider: ImageString.market,
-          string: AppString.marketObservation,
-          routeString: RouteString.marketObservation,
-        ),
+            imageProvider: ImageString.market,
+            string: AppString.marketObservation,
+            routeString: RouteString.marketObservation),
         CategoryBox(
-          imageProvider: ImageString.gps,
-          string: AppString.currentPosition,
-          routeString: RouteString.currentPosition,
-        ),
+            imageProvider: ImageString.gps,
+            string: AppString.currentPosition,
+            routeString: RouteString.currentPosition),
+        CategoryBox(
+            imageProvider: ImageString.leave,
+            string: AppString.leave,
+            routeString: RouteString.leave),
       ],
     );
   }
