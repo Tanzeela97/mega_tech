@@ -39,14 +39,9 @@ abstract class AppString {
   static const reason = 'Reason:';
   static const dayStart= 'Day Start';
   static const device= 'Devices';
-
   static const driver= 'DRIVER';
   static const date= 'DATE';
   static const currentLocation= 'CURRENT LOCATION';
-
-
-
-
   static const preInfo = 'Pre-Info';
   static const infoRemarks = 'Info Remarks';
   static const marketObservation = 'Market Observation';
@@ -55,9 +50,12 @@ abstract class AppString {
   static const observation = 'Observation';
   static const save = 'Save';
   static const leave = 'Leave';
-  static const reason = 'Reason';
   static const selectedVehicle = 'Selected Vehicle';
-
-
+  static const todaysTrack = 'Today\'s Track';
+  static const todayTrack = 'Today Track';
+  static const summery = 'SUMMERY';
+  static const regNo = 'Reg No.';
+  static const mileage = 'Mileage';
+  static const topSpeed = 'Top Speed';
+  static const avgSpeed = 'Avg. Speed';
 }
-

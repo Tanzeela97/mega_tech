@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:megatech/constant/app_string.dart';
 import 'package:megatech/constant/image_string.dart';
-import 'package:megatech/theme/app_color.dart';
 import 'package:megatech/widgets/kElevatedButton.dart';
 import 'package:megatech/widgets/kText.dart';
 import 'package:megatech/widgets/kTextField.dart';

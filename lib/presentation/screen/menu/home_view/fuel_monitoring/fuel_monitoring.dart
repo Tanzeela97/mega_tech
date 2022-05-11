@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:megatech/app_utility/app_utility.dart';
 import 'package:megatech/constant/app_string.dart';
 import 'package:megatech/constant/image_string.dart';
+import 'package:megatech/dependency_injection.dart';
+import 'package:megatech/presentation/blocs/date_time_picker/date_time_picker_bloc.dart';
 import 'package:megatech/theme/app_color.dart';
 import 'package:megatech/widgets/kAppbar.dart';
 import 'package:megatech/widgets/kElevatedButton.dart';
 import 'package:megatech/widgets/kText.dart';
 import 'package:megatech/widgets/kdecoratedField.dart';
 
-class FuelMonitoring extends StatelessWidget {
+class FuelMonitoring extends StatefulWidget {
   const FuelMonitoring({Key? key}) : super(key: key);
+
+  @override
+  State<FuelMonitoring> createState() => _FuelMonitoringState();
+}
+
+class _FuelMonitoringState extends State<FuelMonitoring> {
+  final fromBloc = injector<DateTimePickerBloc>();
+  final toBloc = injector<DateTimePickerBloc>();
 
   @override
   Widget build(BuildContext context) {
@@ -19,35 +31,87 @@ class FuelMonitoring extends StatelessWidget {
         color: AppColor.white,
         fontSize: 28.0,
       )),
-      body: Center(
-        child: Column(children: [
-          Container(),
-          const SizedBox(height: 36.0),
-          const SizedBox(
-            height: 150,
-            width: 150,
-            child: Image(
-              image: ImageString.fuelGauge,
-            ),
-          ),
-          const SizedBox(height: 18.0),
-          const KText('4.5Ltr', fontSize: 35),
-          const KText('14 March 2022,11:45PM'),
-          const SizedBox(height: 18.0),
-          const KDecoratedField(label: true, from: true),
-          const KDecoratedField(label: false, from: true),
-          const KDecoratedField(label: true, from: true),
-          const KDecoratedField(label: false, from: true),
-          KElevatedButton(
-              width: 130,
-              string: AppString.show,
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (_) => const _FuelMonitoringListing()));
-              }),
-        ]),
+      body: BlocBuilder<DateTimePickerBloc, DateTimePickerInitial>(
+        bloc: fromBloc,
+        builder: (_,fromState){
+          return  BlocBuilder<DateTimePickerBloc, DateTimePickerInitial>(
+            bloc: toBloc,
+            builder: (_,toState){
+              return Center(
+                child: Column(children: [
+                  Container(),
+                  const SizedBox(height: 36.0),
+                  const SizedBox(
+                    height: 150,
+                    width: 150,
+                    child: Image(
+                      image: ImageString.fuelGauge,
+                    ),
+                  ),
+                  const SizedBox(height: 18.0),
+                  const KText('4.5Ltr', fontSize: 35),
+                  const KText('14 March 2022,11:45PM'),
+                  const SizedBox(height: 18.0),
+                  BlocBuilder<DateTimePickerBloc, DateTimePickerInitial>(
+                    bloc: fromBloc,
+                    builder: (_, state) {
+                      return Column(
+                        children: [
+                          KDecoratedField(
+                              label: true,
+                              from: true,
+                              value: AppUtility.dateFormat(state.dateTime),
+                              callback: () {
+                                fromBloc.add(PickDate(context: context));
+                              }),
+                          KDecoratedField(
+                              label: false,
+                              from: true,
+                              callback: () {
+                                fromBloc.add(PickTime(context: context));
+                              }),
+                        ],
+                      );
+                    },
+                  ),
+                  /////////////two//
+                  BlocBuilder<DateTimePickerBloc, DateTimePickerInitial>(
+                    bloc: toBloc,
+                    builder: (_, state) {
+                      return Column(
+                        children: [
+                          KDecoratedField(
+                              label: true,
+                              from: false,
+                              callback: () {
+                                toBloc.add(PickDate(context: context));
+                              }),
+                          KDecoratedField(
+                              label: false,
+                              from: true,
+                              callback: () {
+                                toBloc.add(PickTime(context: context));
+                              }),
+                        ],
+                      );
+                    },
+                  ),
+
+                  KElevatedButton(
+                      width: 130,
+                      string: AppString.show,
+                      onTap: () {
+
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (_) => const _FuelMonitoringListing()));
+                      }),
+                ]),
+              );
+            },
+          );
+        },
       ),
     );
   }

@@ -55,7 +55,10 @@ class _HomeState extends State<Home> {
             imageProvider: ImageString.leave,
             string: AppString.leave,
             routeString: RouteString.leave),
-
+        CategoryBox(
+            imageProvider: ImageString.track,
+            string: AppString.todayTrack,
+            routeString: RouteString.todayTrack),
       ],
     );
   }

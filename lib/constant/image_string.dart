@@ -19,4 +19,5 @@ abstract class ImageString{
   static const ImageProvider market = AssetImage('assets/market.png');
   static const ImageProvider gps = AssetImage('assets/gps.png');
   static const ImageProvider appliedLeave = AssetImage('assets/appliedLeave.png');
+  static const ImageProvider track = AssetImage('assets/track.png');
 }

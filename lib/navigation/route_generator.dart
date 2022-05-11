@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:megatech/constant/route_string.dart';
-import 'package:megatech/presentation/main_layout.dart';
+
+
 import 'package:megatech/presentation/menu/home_view/admin_trip/admin_trip.dart';
-import 'package:megatech/presentation/menu/home_view/applied_leave/applied_leave.dart';
 
 import 'package:megatech/presentation/menu/home_view/device/device.dart';
 
-import 'package:megatech/presentation/menu/home_view/current_position/current_position.dart';
 
-import 'package:megatech/presentation/menu/home_view/feedback/feedback.dart';
-import 'package:megatech/presentation/menu/home_view/fuel_monitoring/fuel_monitoring.dart';
-import 'package:megatech/presentation/menu/home_view/leave/leave.dart';
-import 'package:megatech/presentation/menu/home_view/market_observation/market_observation.dart';
-import 'package:megatech/presentation/menu/home_view/pre_info/pre_info.dart';
-import 'package:megatech/presentation/splash_view/splash_view.dart';
+
+import 'package:megatech/presentation/screen/main_layout.dart';
+import 'package:megatech/presentation/screen/menu/home_view/applied_leave/applied_leave.dart';
+import 'package:megatech/presentation/screen/menu/home_view/current_position/current_position.dart';
+import 'package:megatech/presentation/screen/menu/home_view/feedback/feedback.dart';
+import 'package:megatech/presentation/screen/menu/home_view/fuel_monitoring/fuel_monitoring.dart';
+import 'package:megatech/presentation/screen/menu/home_view/leave/leave.dart';
+import 'package:megatech/presentation/screen/menu/home_view/market_observation/market_observation.dart';
+import 'package:megatech/presentation/screen/menu/home_view/pre_info/pre_info.dart';
+import 'package:megatech/presentation/screen/menu/home_view/today_track/today_track.dart';
+import 'package:megatech/presentation/screen/splash_view/splash_view.dart';
+
+
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -47,6 +53,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const CurrentPosition());
       case RouteString.leave:
         return MaterialPageRoute(builder: (_) => const Leave());
+      case RouteString.todayTrack:
+        return MaterialPageRoute(builder: (_) => const TodayTrack());
+
+
         // case '/second':
         // // Validation of correct data type
         //   if (args is String) {

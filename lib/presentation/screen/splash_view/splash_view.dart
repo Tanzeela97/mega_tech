@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:megatech/constant/image_string.dart';
 import 'package:megatech/constant/route_string.dart';
-import 'package:megatech/widgets/kText.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);

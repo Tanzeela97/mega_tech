@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:megatech/constant/app_string.dart';
-import 'package:megatech/constant/image_string.dart';
 import 'package:megatech/theme/app_color.dart';
 import 'package:megatech/widgets/kAppbar.dart';
 import 'package:megatech/widgets/kElevatedButton.dart';
@@ -37,13 +36,7 @@ class AppliedLeave extends StatelessWidget {
           const KDecoratedField(label: true, from: true),
           const KDecoratedField(label: false, from: true),
 
-
-
-       
-  
-
-          KElevatedButton(width: 130, string: AppString.showw, onTap: () {}),
-
+          KElevatedButton(width: 130, string: AppString.show, onTap: () {}),
         ]),
       ),
     );

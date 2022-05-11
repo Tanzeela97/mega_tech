@@ -5,9 +5,8 @@ import 'package:megatech/widgets/kAppbar.dart';
 import 'package:megatech/widgets/kElevatedButton.dart';
 import 'package:megatech/widgets/kMultilineTextField.dart';
 import 'package:megatech/widgets/kText.dart';
-import 'package:megatech/widgets/kTextField.dart';
+import 'package:megatech/widgets/kTextFieldNonFloatingLabel.dart';
 
-import '../../../../widgets/kTextFieldNonFloatingLabel.dart';
 
 class MarketObservation extends StatelessWidget {
   const MarketObservation({Key? key}) : super(key: key);

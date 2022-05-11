@@ -40,7 +40,9 @@ dependencies:
 
   #map
   google_maps_flutter: ^2.1.4
-
+  #stateManagement
+  flutter_bloc: ^8.0.1
+  get_it: ^7.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

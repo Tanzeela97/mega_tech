@@ -50,7 +50,6 @@ class _CurrentPositionState extends State<CurrentPosition> {
             left: 20,
             child: Chip(
               backgroundColor: AppColor.blue,
-              
               label: ValueListenableBuilder<String>(
                 valueListenable: valueNotifier,
                 builder: (_,value,child)=>DropdownButtonHideUnderline(
@@ -68,6 +67,7 @@ class _CurrentPositionState extends State<CurrentPosition> {
               ),
             ),
           ),
+
         ],
       ),
     );

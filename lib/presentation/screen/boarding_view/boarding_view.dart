@@ -26,7 +26,7 @@ class _BoardingViewState extends State<BoardingView> {
         padding: const EdgeInsets.only(bottom: 100),
         child: FloatingActionButton.extended(
           onPressed: (){
-            _pageController.animateToPage(2, duration: Duration(milliseconds: 500), curve: Curves.decelerate);
+            _pageController.animateToPage(2, duration: const Duration(milliseconds: 500), curve: Curves.decelerate);
           },
           shape:  RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0)

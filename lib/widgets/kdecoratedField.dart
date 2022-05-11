@@ -6,8 +6,9 @@ import 'package:megatech/widgets/kText.dart';
 class KDecoratedField extends StatelessWidget {
   final bool from;
   final bool label;
-
-  const KDecoratedField({Key? key,required this.label,required this.from}) : super(key: key);
+  final String? value;
+  final VoidCallback? callback;
+  const KDecoratedField({Key? key,required this.label,required this.from, this.callback,this.value}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -41,14 +42,15 @@ class KDecoratedField extends StatelessWidget {
                  crossAxisAlignment: CrossAxisAlignment.start,
                  children: [
                    label?KText(from?AppString.from:AppString.to):const SizedBox.shrink(),
-                   KText(label?'13-03-2022':'11:45PM',color: AppColor.grey),
+                   //KText(label?'13-03-2022':'11:45PM',color: AppColor.grey),
+                   KText(value??'Noting Selected',color: AppColor.grey),
                  ],
                )),
               Expanded(child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children:  [
-                  Icon(label?Icons.calendar_month:Icons.access_time_outlined),
-                  Icon(Icons.keyboard_arrow_down)
+                  InkWell(onTap: callback,child: Icon(label?Icons.calendar_month:Icons.access_time_outlined)),
+                  const Icon(Icons.keyboard_arrow_down)
                 ],
               )),
             ],

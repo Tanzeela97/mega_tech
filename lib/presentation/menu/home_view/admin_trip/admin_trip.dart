@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:megatech/widgets/KTextFieldNonFloatingLabel.dart';
+import 'package:megatech/widgets/kTextFieldNonFloatingLabel.dart';
 import 'package:megatech/widgets/kAppbar.dart';
 
 import '../../../../constant/app_string.dart';

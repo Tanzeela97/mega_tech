@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:megatech/constant/app_string.dart';
 import 'package:megatech/constant/image_string.dart';
-import 'package:megatech/presentation/menu/demo_view/demo_view.dart';
-import 'package:megatech/presentation/menu/home_view/home_view.dart';
-import 'package:megatech/presentation/menu/setting_view/settting_view.dart';
+import 'package:megatech/presentation/screen/menu/demo_view/demo_view.dart';
+import 'package:megatech/presentation/screen/menu/home_view/home_view.dart';
+import 'package:megatech/presentation/screen/menu/setting_view/settting_view.dart';
 import 'package:megatech/theme/app_color.dart';
 import 'package:megatech/widgets/kAppbar.dart';
-import 'package:megatech/widgets/kText.dart';
 
 class MenuView extends StatefulWidget {
   final AnimationController animationController;
