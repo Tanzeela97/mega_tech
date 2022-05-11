@@ -32,6 +32,16 @@ class _HomeState extends State<Home> {
           string: AppString.feedback,
           routeString: RouteString.feedback,
         ),
+        CategoryBox(
+          imageProvider: ImageString.feedback,
+          string: AppString.adminTrip,
+          routeString: RouteString.adminTrip,
+        ),
+        CategoryBox(
+          imageProvider: ImageString.feedback,
+          string: AppString.device,
+          routeString: RouteString.device,
+        ),
       ],
     );
   }

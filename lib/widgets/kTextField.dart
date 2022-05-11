@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:megatech/theme/app_color.dart';
 import 'package:megatech/widgets/kText.dart';
 
+import '../constant/app_string.dart';
+
 class KTextField extends StatelessWidget {
   final String label;
   final String? hintText;
@@ -38,7 +40,7 @@ class KTextField extends StatelessWidget {
                 focusedBorder: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(16.0)),
                     borderSide:
-                    BorderSide(width: 1, color: Colors.transparent)),
+                        BorderSide(width: 1, color: Colors.transparent)),
               ),
               // The validator receives the text that the user has entered.
               validator: (value) {
@@ -54,3 +56,4 @@ class KTextField extends StatelessWidget {
     );
   }
 }
+

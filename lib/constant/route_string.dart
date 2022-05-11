@@ -6,4 +6,6 @@ abstract class RouteString{
   static const fuel = '/fuel';
   static const appliedLeave = '/appliedLeave';
   static const feedback = '/feedback';
+  static const adminTrip = '/adminTrip';
+  static const device = '/ device';
 }

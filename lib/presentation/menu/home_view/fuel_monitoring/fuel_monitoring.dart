@@ -40,7 +40,7 @@ class FuelMonitoring extends StatelessWidget {
           const KDecoratedField(label: false, from: true),
           KElevatedButton(
               width: 130,
-              string: AppString.showw,
+              string: AppString.show,
               onTap: () {
                 Navigator.push(
                     context,

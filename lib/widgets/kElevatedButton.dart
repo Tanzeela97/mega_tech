@@ -5,6 +5,7 @@ import 'package:megatech/widgets/kText.dart';
 
 class KElevatedButton extends StatelessWidget {
   final double width;
+
   final String string;
   final VoidCallback? onTap;
 

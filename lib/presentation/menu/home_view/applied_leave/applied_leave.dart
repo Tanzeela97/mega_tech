@@ -41,7 +41,7 @@ class AppliedLeave extends StatelessWidget {
           const KDecoratedField(label: false, from: true),
 
 
-          KElevatedButton(width: 130, string: AppString.showw,onTap:(){
+          KElevatedButton(width: 130, string: AppString.show,onTap:(){
 
           }),
         ]),
