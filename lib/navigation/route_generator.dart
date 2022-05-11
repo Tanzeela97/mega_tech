@@ -3,9 +3,16 @@ import 'package:megatech/constant/route_string.dart';
 import 'package:megatech/presentation/main_layout.dart';
 import 'package:megatech/presentation/menu/home_view/admin_trip/admin_trip.dart';
 import 'package:megatech/presentation/menu/home_view/applied_leave/applied_leave.dart';
+
 import 'package:megatech/presentation/menu/home_view/device/device.dart';
+
+import 'package:megatech/presentation/menu/home_view/current_position/current_position.dart';
+
 import 'package:megatech/presentation/menu/home_view/feedback/feedback.dart';
 import 'package:megatech/presentation/menu/home_view/fuel_monitoring/fuel_monitoring.dart';
+import 'package:megatech/presentation/menu/home_view/leave/leave.dart';
+import 'package:megatech/presentation/menu/home_view/market_observation/market_observation.dart';
+import 'package:megatech/presentation/menu/home_view/pre_info/pre_info.dart';
 import 'package:megatech/presentation/splash_view/splash_view.dart';
 
 class RouteGenerator {
@@ -26,10 +33,20 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const AppliedLeave());
       case RouteString.feedback:
         return MaterialPageRoute(builder: (_) => const FeedBack());
+
       case RouteString.adminTrip:
         return MaterialPageRoute(builder: (_) => const AdminTrip());
       case RouteString.device:
         return MaterialPageRoute(builder: (_) => const Device());
+
+      case RouteString.preInfo:
+        return MaterialPageRoute(builder: (_) => const PreInfo());
+      case RouteString.marketObservation:
+        return MaterialPageRoute(builder: (_) => const MarketObservation());
+      case RouteString.currentPosition:
+        return MaterialPageRoute(builder: (_) => const CurrentPosition());
+      case RouteString.leave:
+        return MaterialPageRoute(builder: (_) => const Leave());
         // case '/second':
         // // Validation of correct data type
         //   if (args is String) {

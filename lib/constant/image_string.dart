@@ -4,7 +4,7 @@ abstract class ImageString{
   static const ImageProvider logo = AssetImage('assets/logo.png');
   static const ImageProvider profile = AssetImage('assets/profile.png');
   static const ImageProvider demo = AssetImage('assets/domo.png');
-  static const ImageProvider logout = AssetImage('assets/logout.png');
+  static const ImageProvider logout = AssetImage('assets/leave.png');
   static const ImageProvider setting = AssetImage('assets/setting.png');
   static const ImageProvider home = AssetImage('assets/home.png');
   static const ImageProvider splash = AssetImage('assets/splash.gif');
@@ -15,4 +15,8 @@ abstract class ImageString{
   static const ImageProvider currentPosition = AssetImage('assets/current_position.png');
   static const ImageProvider feedback = AssetImage('assets/feedback.png');
   static const ImageProvider leave = AssetImage('assets/leave.png');
+  static const ImageProvider info = AssetImage('assets/info.png');
+  static const ImageProvider market = AssetImage('assets/market.png');
+  static const ImageProvider gps = AssetImage('assets/gps.png');
+  static const ImageProvider appliedLeave = AssetImage('assets/appliedLeave.png');
 }

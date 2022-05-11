@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+
+class KTextFieldNonFloatingLabel extends StatelessWidget {
+  final String? label;
+  const KTextFieldNonFloatingLabel({Key? key,this.label}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16.0),
+      child: TextField(
+        decoration: InputDecoration(
+            filled: true,
+            //fillColor: Colors.grey[200],
+            // border: const OutlineInputBorder(
+            //   borderRadius: BorderRadius.all(Radius.circular(16.0)),
+            //   borderSide:BorderSide.none
+            //
+            // ),
+            border: InputBorder.none,
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+            labelText: label,
+            labelStyle:  Theme.of(context).textTheme.bodyText1!.copyWith(fontSize: 22)
+          //border: OutlineInputBorder(),
+          //fillColor:
+        ),
+      ),
+    );
+  }
+}

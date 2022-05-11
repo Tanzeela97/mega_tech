@@ -14,11 +14,8 @@ class AppliedLeave extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const KAppBar(
-          title: KText(
-            AppString.leaveApplication,
-            color: AppColor.white,
-            fontSize: 28.0,
-          )),
+          title: KText(AppString.appliedLeave,
+              color: AppColor.white, fontSize: 28.0)),
       body: Center(
         child: Column(children: [
           const SizedBox(height: 180.0),
@@ -41,9 +38,12 @@ class AppliedLeave extends StatelessWidget {
           const KDecoratedField(label: false, from: true),
 
 
-          KElevatedButton(width: 130, string: AppString.show,onTap:(){
 
-          }),
+       
+  
+
+          KElevatedButton(width: 130, string: AppString.showw, onTap: () {}),
+
         ]),
       ),
     );

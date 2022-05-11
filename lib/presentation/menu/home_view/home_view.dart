@@ -14,20 +14,21 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      children:const [
-         CategoryBox(
+
+    return GridView.count(
+      crossAxisCount: 3,
+      children: const [
+        CategoryBox(
           imageProvider: ImageString.fuelTwo,
           string: AppString.fuel,
           routeString: RouteString.fuel,
         ),
-         CategoryBox(
-          imageProvider: ImageString.leave,
+        CategoryBox(
+          imageProvider: ImageString.appliedLeave,
           string: AppString.appliedLeave,
           routeString: RouteString.appliedLeave,
         ),
-         CategoryBox(
+        CategoryBox(
           imageProvider: ImageString.feedback,
           string: AppString.feedback,
           routeString: RouteString.feedback,
@@ -42,6 +43,19 @@ class _HomeState extends State<Home> {
           string: AppString.device,
           routeString: RouteString.device,
         ),
+        CategoryBox(
+            imageProvider: ImageString.market,
+            string: AppString.marketObservation,
+            routeString: RouteString.marketObservation),
+        CategoryBox(
+            imageProvider: ImageString.gps,
+            string: AppString.currentPosition,
+            routeString: RouteString.currentPosition),
+        CategoryBox(
+            imageProvider: ImageString.leave,
+            string: AppString.leave,
+            routeString: RouteString.leave),
+
       ],
     );
   }
@@ -67,9 +81,11 @@ class CategoryBox extends StatelessWidget {
           width: 80,
           height: 80,
           child: IconButton(
-              onPressed: routeString != null ? () {
-                Navigator.pushNamed(context, routeString!);
-              } : null,
+              onPressed: routeString != null
+                  ? () {
+                      Navigator.pushNamed(context, routeString!);
+                    }
+                  : null,
               icon: Image(image: imageProvider)),
         ),
         KText(string),
