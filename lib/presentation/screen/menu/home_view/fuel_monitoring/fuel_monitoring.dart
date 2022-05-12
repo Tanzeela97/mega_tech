@@ -52,49 +52,38 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
                   const KText('4.5Ltr', fontSize: 35),
                   const KText('14 March 2022,11:45PM'),
                   const SizedBox(height: 18.0),
-                  BlocBuilder<DateTimePickerBloc, DateTimePickerInitial>(
-                    bloc: fromBloc,
-                    builder: (_, state) {
-                      return Column(
-                        children: [
-                          KDecoratedField(
-                              label: true,
-                              from: true,
-                              value: AppUtility.dateFormat(state.dateTime),
-                              callback: () {
-                                fromBloc.add(PickDate(context: context));
-                              }),
-                          KDecoratedField(
-                              label: false,
-                              from: true,
-                              callback: () {
-                                fromBloc.add(PickTime(context: context));
-                              }),
-                        ],
-                      );
-                    },
-                  ),
-                  /////////////two//
-                  BlocBuilder<DateTimePickerBloc, DateTimePickerInitial>(
-                    bloc: toBloc,
-                    builder: (_, state) {
-                      return Column(
-                        children: [
-                          KDecoratedField(
-                              label: true,
-                              from: false,
-                              callback: () {
-                                toBloc.add(PickDate(context: context));
-                              }),
-                          KDecoratedField(
-                              label: false,
-                              from: true,
-                              callback: () {
-                                toBloc.add(PickTime(context: context));
-                              }),
-                        ],
-                      );
-                    },
+                  Column(
+                    children: [
+                      KDecoratedField(
+                          label: true,
+                          from: true,
+
+                          value: AppUtility.dateFormat(fromState.dateTime),
+                          callback: () {
+                            fromBloc.add(PickDate(context: context));
+                          }),
+                      KDecoratedField(
+                          label: false,
+                          from: true,
+                          value: AppUtility.timeFormat(fromState.timeOfDay),
+                          callback: () {
+                            fromBloc.add(PickTime(context: context));
+                          }),
+                      KDecoratedField(
+                          label: true,
+                          from: false,
+                          value: AppUtility.dateFormat(toState.dateTime),
+                          callback: () {
+                            toBloc.add(PickDate(context: context));
+                          }),
+                      KDecoratedField(
+                          label: false,
+                          from: true,
+                          value: AppUtility.timeFormat(toState.timeOfDay),
+                          callback: () {
+                            toBloc.add(PickTime(context: context));
+                          }),
+                    ],
                   ),
 
                   KElevatedButton(

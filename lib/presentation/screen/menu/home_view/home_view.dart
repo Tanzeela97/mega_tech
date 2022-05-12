@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
       crossAxisCount: 3,
       children: const [
         CategoryBox(
-          imageProvider: ImageString.fuelTwo,
+          imageProvider: ImageString.fuelManagement,
           string: AppString.fuel,
           routeString: RouteString.fuel,
         ),
@@ -34,21 +34,21 @@ class _HomeState extends State<Home> {
           routeString: RouteString.feedback,
         ),
         CategoryBox(
-          imageProvider: ImageString.feedback,
+          imageProvider: ImageString.adminTrip,
           string: AppString.adminTrip,
           routeString: RouteString.adminTrip,
         ),
-        CategoryBox(
-          imageProvider: ImageString.feedback,
-          string: AppString.device,
-          routeString: RouteString.device,
-        ),
+        // CategoryBox(
+        //   imageProvider: ImageString.feedback,
+        //   string: AppString.device,
+        //   routeString: RouteString.device,
+        // ),
         CategoryBox(
             imageProvider: ImageString.market,
             string: AppString.marketObservation,
             routeString: RouteString.marketObservation),
         CategoryBox(
-            imageProvider: ImageString.gps,
+            imageProvider: ImageString.location,
             string: AppString.currentPosition,
             routeString: RouteString.currentPosition),
         CategoryBox(
@@ -59,6 +59,10 @@ class _HomeState extends State<Home> {
             imageProvider: ImageString.track,
             string: AppString.todayTrack,
             routeString: RouteString.todayTrack),
+        CategoryBox(
+            imageProvider: ImageString.info,
+            string: AppString.preInfo,
+            routeString: RouteString.preInfo),
       ],
     );
   }

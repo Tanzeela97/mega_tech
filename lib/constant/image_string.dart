@@ -20,4 +20,6 @@ abstract class ImageString{
   static const ImageProvider gps = AssetImage('assets/gps.png');
   static const ImageProvider appliedLeave = AssetImage('assets/appliedLeave.png');
   static const ImageProvider track = AssetImage('assets/track.png');
+  static const ImageProvider adminTrip = AssetImage('assets/adminTrip.png');
+  static const ImageProvider location = AssetImage('assets/location.png');
 }

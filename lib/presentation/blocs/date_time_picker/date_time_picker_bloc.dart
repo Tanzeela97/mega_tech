@@ -20,15 +20,16 @@ class DateTimePickerBloc
           initialDate: _initialDateTime,
           firstDate: DateTime(1900),
           lastDate: DateTime(2100));
-      emit(state.copyWith(dateTime: dateTime));
+      emit(state.copyWith(dateTime: dateTime,showError: false));
     });
     //////////////PickTime/////////////////////
     on<PickTime>((event, emit) async {
       TimeOfDay? timeOfDay = await showTimePicker(
           context: event.context,
           initialTime: TimeOfDay(
-              hour: _initialDateTime.hour, minute: _initialDateTime.minute),);
-      emit(state.copyWith(timeOfDay: timeOfDay));
+              hour: _initialDateTime.hour, minute: _initialDateTime.minute));
+
+      emit(state.copyWith(timeOfDay: timeOfDay,showError: false));
     });
   }
 }
