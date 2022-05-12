@@ -22,4 +22,8 @@ abstract class ImageString{
   static const ImageProvider track = AssetImage('assets/track.png');
   static const ImageProvider adminTrip = AssetImage('assets/adminTrip.png');
   static const ImageProvider location = AssetImage('assets/location.png');
+  static const ImageProvider secureParking = AssetImage('assets/secureParking.png');
+  static const ImageProvider releaseEngine = AssetImage('assets/releaseEngine.png');
+  static const ImageProvider killEngine = AssetImage('assets/killEngine.png');
+  static const ImageProvider infoWhite = AssetImage('assets/infoWhite.png');
 }

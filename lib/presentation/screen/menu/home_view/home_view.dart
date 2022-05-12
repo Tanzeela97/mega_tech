@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:megatech/constant/app_string.dart';
 import 'package:megatech/constant/image_string.dart';
 import 'package:megatech/constant/route_string.dart';
+import 'package:megatech/theme/app_color.dart';
 import 'package:megatech/widgets/kText.dart';
 
 class Home extends StatefulWidget {
@@ -16,6 +17,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
 
     return GridView.count(
+      padding: const EdgeInsets.symmetric(vertical: 26.0),
       crossAxisCount: 3,
       children: const [
         CategoryBox(
@@ -63,6 +65,11 @@ class _HomeState extends State<Home> {
             imageProvider: ImageString.info,
             string: AppString.preInfo,
             routeString: RouteString.preInfo),
+
+        CategoryBox(
+            imageProvider: ImageString.secureParking,
+            string: AppString.secureParking,
+            routeString: RouteString.secureParking),
       ],
     );
   }
@@ -84,17 +91,26 @@ class CategoryBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        Container(
+          decoration: BoxDecoration(
+              color: AppColor.white,
+            boxShadow: [BoxShadow(color: Colors.grey[200]!,spreadRadius: 3,blurRadius: 3)],
+            borderRadius: BorderRadius.circular(16.0),
+            border: Border.all(color: Colors.grey[200]!)
+          ),
           width: 80,
           height: 80,
-          child: IconButton(
-              onPressed: routeString != null
-                  ? () {
-                      Navigator.pushNamed(context, routeString!);
-                    }
-                  : null,
-              icon: Image(image: imageProvider)),
+          child: Align(
+            child: IconButton(
+                onPressed: routeString != null
+                    ? () {
+                        Navigator.pushNamed(context, routeString!);
+                      }
+                    : null,
+                icon: Image(image: imageProvider),iconSize: 50),
+          ),
         ),
+        const SizedBox(height: 12.0),
         KText(string),
       ],
     );

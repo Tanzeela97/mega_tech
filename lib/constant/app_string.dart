@@ -58,4 +58,6 @@ abstract class AppString {
   static const mileage = 'Mileage';
   static const topSpeed = 'Top Speed';
   static const avgSpeed = 'Avg. Speed';
+  static const secureParking = 'Secure Parking';
+  static const note = 'Note';
 }

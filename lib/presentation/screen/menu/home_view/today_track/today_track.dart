@@ -27,8 +27,10 @@ class _TodayTrackState extends State<TodayTrack> {
     await showModalBottomSheet(
       context: context,
       backgroundColor: Colors.grey[200],
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18.0),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+            topLeft:  Radius.circular(18.0),
+            topRight:  Radius.circular(18.0)),
       ),
       builder: (_) => SizedBox(
         height: 300,

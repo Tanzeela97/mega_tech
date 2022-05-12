@@ -57,7 +57,6 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
                       KDecoratedField(
                           label: true,
                           from: true,
-
                           value: AppUtility.dateFormat(fromState.dateTime),
                           callback: () {
                             fromBloc.add(PickDate(context: context));
@@ -85,16 +84,16 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
                           }),
                     ],
                   ),
-
+                  const SizedBox(height: 26.0),
                   KElevatedButton(
                       width: 130,
                       string: AppString.show,
                       onTap: () {
 
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (_) => const _FuelMonitoringListing()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const _FuelMonitoringListing()));
                       }),
                 ]),
               );

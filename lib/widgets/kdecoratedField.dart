@@ -53,7 +53,7 @@ class KDecoratedField extends StatelessWidget {
                         ? KText(from ? AppString.from : AppString.to)
                         : const SizedBox.shrink(),
                     //KText(label?'13-03-2022':'11:45PM',color: AppColor.grey),
-                    KText(label?value ?? 'yyyy-mm-dd':'00:00', color: AppColor.grey),
+                    KText(value ?? (label?'yyyy-mm-dd':'00:00'), color: AppColor.grey),
                   ],
                 )),
                 Expanded(child: InkWell(

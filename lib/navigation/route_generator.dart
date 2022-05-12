@@ -16,6 +16,7 @@ import 'package:megatech/presentation/screen/menu/home_view/fuel_monitoring/fuel
 import 'package:megatech/presentation/screen/menu/home_view/leave/leave.dart';
 import 'package:megatech/presentation/screen/menu/home_view/market_observation/market_observation.dart';
 import 'package:megatech/presentation/screen/menu/home_view/pre_info/pre_info.dart';
+import 'package:megatech/presentation/screen/menu/home_view/secure_parking/secure_parking.dart';
 import 'package:megatech/presentation/screen/menu/home_view/today_track/today_track.dart';
 import 'package:megatech/presentation/screen/splash_view/splash_view.dart';
 
@@ -55,6 +56,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const Leave());
       case RouteString.todayTrack:
         return MaterialPageRoute(builder: (_) => const TodayTrack());
+      case RouteString.secureParking:
+        return MaterialPageRoute(builder: (_) => const SecureParking());
 
 
         // case '/second':

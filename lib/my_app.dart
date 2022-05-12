@@ -50,6 +50,7 @@ class _MyAppState extends State<MyApp> {
       initialRoute: RouteString.initial,
       title: AppString.megaTech,
       theme: AppTheme.mainTheme,
+
       onGenerateRoute: RouteGenerator.generateRoute,
       navigatorObservers: [
         RouteObservers.routeObserver,
