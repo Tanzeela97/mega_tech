@@ -3,7 +3,8 @@ import 'package:megatech/theme/app_color.dart';
 import 'package:megatech/widgets/kText.dart';
 class KMultiLineTextField extends StatelessWidget {
   final String title;
-  const KMultiLineTextField({Key? key,required this.title}) : super(key: key);
+  final IconData? iconData;
+  const KMultiLineTextField({Key? key,required this.title,this.iconData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +18,10 @@ class KMultiLineTextField extends StatelessWidget {
         children: [
           const SizedBox(height: 10),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children:  [
-              const Icon(Icons.message_outlined,size: 28),
+              iconData==null?const SizedBox.shrink():const Icon(Icons.message_outlined,size: 28),
               const SizedBox(width: 13.0),
               KText(title)
             ],

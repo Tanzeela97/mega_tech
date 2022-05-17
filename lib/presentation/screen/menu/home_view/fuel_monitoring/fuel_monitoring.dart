@@ -26,17 +26,14 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const KAppBar(
-          title: KText(
-        AppString.fuelMonitoring,
-        color: AppColor.white,
-        fontSize: 28.0,
-      )),
+          title: KText(AppString.fuelMonitoring,
+              color: AppColor.white, fontSize: 28.0)),
       body: BlocBuilder<DateTimePickerBloc, DateTimePickerInitial>(
         bloc: fromBloc,
-        builder: (_,fromState){
-          return  BlocBuilder<DateTimePickerBloc, DateTimePickerInitial>(
+        builder: (_, fromState) {
+          return BlocBuilder<DateTimePickerBloc, DateTimePickerInitial>(
             bloc: toBloc,
-            builder: (_,toState){
+            builder: (_, toState) {
               return Center(
                 child: Column(children: [
                   Container(),
@@ -57,6 +54,7 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
                       KDecoratedField(
                           label: true,
                           from: true,
+                          labelString: AppString.from,
                           value: AppUtility.dateFormat(fromState.dateTime),
                           callback: () {
                             fromBloc.add(PickDate(context: context));
@@ -64,6 +62,7 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
                       KDecoratedField(
                           label: false,
                           from: true,
+                          labelString: '',
                           value: AppUtility.timeFormat(fromState.timeOfDay),
                           callback: () {
                             fromBloc.add(PickTime(context: context));
@@ -71,6 +70,7 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
                       KDecoratedField(
                           label: true,
                           from: false,
+                          labelString: AppString.to,
                           value: AppUtility.dateFormat(toState.dateTime),
                           callback: () {
                             toBloc.add(PickDate(context: context));
@@ -78,6 +78,7 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
                       KDecoratedField(
                           label: false,
                           from: true,
+                          labelString: '',
                           value: AppUtility.timeFormat(toState.timeOfDay),
                           callback: () {
                             toBloc.add(PickTime(context: context));
@@ -89,11 +90,11 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
                       width: 130,
                       string: AppString.show,
                       onTap: () {
-
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (_) => const _FuelMonitoringListing()));
+                                builder: (_) =>
+                                    const _FuelMonitoringListing()));
                       }),
                 ]),
               );

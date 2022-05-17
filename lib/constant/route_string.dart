@@ -14,5 +14,9 @@ abstract class RouteString{
   static const leave = '/leave';
   static const todayTrack = '/todayTrack';
   static const secureParking = '/secureParking';
+  static const drivingObservation = '/drivingObservation';
+  static const fuelManagement = '/fuelManagement';
+  static const trackHistory = '/trackHistory';
+  static const vehicleObservation  = '/vehicleObservation';
 
 }

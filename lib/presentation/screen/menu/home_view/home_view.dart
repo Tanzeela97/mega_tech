@@ -21,8 +21,8 @@ class _HomeState extends State<Home> {
       crossAxisCount: 3,
       children: const [
         CategoryBox(
-          imageProvider: ImageString.fuelManagement,
-          string: AppString.fuel,
+          imageProvider: ImageString.fuelMonitoring,
+          string: AppString.fuelMonitoring,
           routeString: RouteString.fuel,
         ),
         CategoryBox(
@@ -70,6 +70,22 @@ class _HomeState extends State<Home> {
             imageProvider: ImageString.secureParking,
             string: AppString.secureParking,
             routeString: RouteString.secureParking),
+        CategoryBox(
+            imageProvider: ImageString.drivingObservation,
+            string: AppString.drivingObservation,
+            routeString: RouteString.drivingObservation),
+        CategoryBox(
+            imageProvider: ImageString.fuelTwo,
+            string:   AppString.fuel,
+            routeString: RouteString.fuelManagement),
+        CategoryBox(
+            imageProvider: ImageString.trackHistory,
+            string: AppString.trackHistory,
+            routeString: RouteString.trackHistory),
+        CategoryBox(
+            imageProvider: ImageString.trackHistory,
+            string: AppString.vehicleObservation,
+            routeString: RouteString.vehicleObservation),
       ],
     );
   }

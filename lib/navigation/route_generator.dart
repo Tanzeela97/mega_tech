@@ -11,13 +11,18 @@ import 'package:megatech/presentation/menu/home_view/device/device.dart';
 import 'package:megatech/presentation/screen/main_layout.dart';
 import 'package:megatech/presentation/screen/menu/home_view/applied_leave/applied_leave.dart';
 import 'package:megatech/presentation/screen/menu/home_view/current_position/current_position.dart';
+import 'package:megatech/presentation/screen/menu/home_view/driving_observation/driving_observation.dart';
 import 'package:megatech/presentation/screen/menu/home_view/feedback/feedback.dart';
+import 'package:megatech/presentation/screen/menu/home_view/fuel_management/fuel_management.dart';
 import 'package:megatech/presentation/screen/menu/home_view/fuel_monitoring/fuel_monitoring.dart';
 import 'package:megatech/presentation/screen/menu/home_view/leave/leave.dart';
 import 'package:megatech/presentation/screen/menu/home_view/market_observation/market_observation.dart';
 import 'package:megatech/presentation/screen/menu/home_view/pre_info/pre_info.dart';
 import 'package:megatech/presentation/screen/menu/home_view/secure_parking/secure_parking.dart';
 import 'package:megatech/presentation/screen/menu/home_view/today_track/today_track.dart';
+import 'package:megatech/presentation/screen/menu/home_view/track_history/track_history.dart';
+import 'package:megatech/presentation/screen/menu/home_view/vehicle_observation/vehicle_observation.dart';
+import 'package:megatech/presentation/screen/signIn_view/signIn_view.dart';
 import 'package:megatech/presentation/screen/splash_view/splash_view.dart';
 
 
@@ -29,9 +34,11 @@ class RouteGenerator {
 
     switch (settings.name) {
       case RouteString.initial:
-        return MaterialPageRoute(builder: (_) => const SplashView());
-        //  return MaterialPageRoute(builder: (_) => const BoardingView());
+        //return MaterialPageRoute(builder: (_) => const SplashView());
+          return MaterialPageRoute(builder: (_) => const MainLayout());
         return MaterialPageRoute(builder: (_) => const FeedBack());
+      case RouteString.login:
+        return MaterialPageRoute(builder: (_) => const SignInView());
       case RouteString.layout:
         return MaterialPageRoute(builder: (_) => const MainLayout());
       case RouteString.fuel:
@@ -58,6 +65,14 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const TodayTrack());
       case RouteString.secureParking:
         return MaterialPageRoute(builder: (_) => const SecureParking());
+      case RouteString.drivingObservation:
+        return MaterialPageRoute(builder: (_) => const DrivingObservation());
+      case RouteString.fuelManagement:
+        return MaterialPageRoute(builder: (_) => const FuelManagement());
+      case RouteString.trackHistory:
+        return MaterialPageRoute(builder: (_) => const TrackHistory());
+      case RouteString.vehicleObservation:
+        return MaterialPageRoute(builder: (_) => const VehicleObservation());
 
 
         // case '/second':

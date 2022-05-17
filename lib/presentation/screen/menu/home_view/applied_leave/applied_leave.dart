@@ -31,10 +31,10 @@ class AppliedLeave extends StatelessWidget {
           // const KText('14 March 2022,11:45PM'),
           // const SizedBox(height: 18.0),
 
-          const KDecoratedField(label: true, from: true),
-          const KDecoratedField(label: false, from: true),
-          const KDecoratedField(label: true, from: true),
-          const KDecoratedField(label: false, from: true),
+          const KDecoratedField(label: true, from: true,labelString: AppString.from),
+          const KDecoratedField(label: false, from: true,labelString: ''),
+          const KDecoratedField(label: true, from: true,labelString: AppString.to),
+          const KDecoratedField(label: false, from: true,labelString: ''),
 
           KElevatedButton(width: 130, string: AppString.show, onTap: () {}),
         ]),

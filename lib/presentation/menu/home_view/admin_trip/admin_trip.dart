@@ -26,9 +26,7 @@ class AdminTrip extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
               children: [
-                const SizedBox(
-                  height: 40,
-                ),
+                const SizedBox(height: 40),
                 Row(
                   children: const [
                     Expanded(
@@ -42,9 +40,7 @@ class AdminTrip extends StatelessWidget {
                     )),
                   ],
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 Row(children: const [
                   Expanded(
                       child: KTextFieldNonFloatingLabel(
@@ -56,14 +52,10 @@ class AdminTrip extends StatelessWidget {
                     label: AppString.employeeName,
                   )),
                 ]),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 const KTextFieldNonFloatingLabel(
                     label: AppString.employeeDesignation),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20),
                 const KTextFieldNonFloatingLabel(
                     label: AppString.employeeCellNo),
                 const SizedBox(

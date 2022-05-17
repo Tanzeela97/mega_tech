@@ -26,4 +26,12 @@ abstract class ImageString{
   static const ImageProvider releaseEngine = AssetImage('assets/releaseEngine.png');
   static const ImageProvider killEngine = AssetImage('assets/killEngine.png');
   static const ImageProvider infoWhite = AssetImage('assets/infoWhite.png');
+  static const ImageProvider fuelPrice = AssetImage('assets/fuel_price.png');
+  static const ImageProvider amount = AssetImage('assets/amount.png');
+  static const ImageProvider radioActive = AssetImage('assets/radio_active.png');
+  static const ImageProvider radioInactive = AssetImage('assets/radio_inActive.png');
+  static const ImageProvider play = AssetImage('assets/play.png');
+  static const ImageProvider trackHistory = AssetImage('assets/track_history.png');
+  static const ImageProvider fuelMonitoring = AssetImage('assets/fuel_monitoring.png');
+  static const ImageProvider drivingObservation = AssetImage('assets/driving_observation.png');
 }

@@ -36,17 +36,17 @@ class _PreInfoState extends State<PreInfo> {
                 prefixIcon: const Icon(Icons.category)),
             Row(
               children:const [
-                 Expanded(child: KDecoratedField(label: true, from: false)),
+                 Expanded(child: KDecoratedField(label: true, from: false,labelString: AppString.from)),
                  SizedBox(width: 18.0),
-                 Expanded(child: KDecoratedField(label: false, from: true)),
+                 Expanded(child: KDecoratedField(label: false, from: true,labelString: '')),
 
               ],
             ),
             Row(
               children:const [
-                Expanded(child: KDecoratedField(label: true, from: true)),
+                Expanded(child: KDecoratedField(label: true, from: true,labelString: AppString.to)),
                 SizedBox(width: 18.0),
-                Expanded(child: KDecoratedField(label: false, from: true)),
+                Expanded(child: KDecoratedField(label: false, from: true,labelString: '')),
 
               ],
             ),

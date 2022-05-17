@@ -38,9 +38,9 @@ class _LeaveState extends State<Leave> {
             const SizedBox(height: 26.0),
             Row(
               children:const [
-                Expanded(child: KDecoratedField(label: true, from: true)),
+                Expanded(child: KDecoratedField(label: true, from: true,labelString: AppString.from)),
                 SizedBox(width: 18.0),
-                Expanded(child: KDecoratedField(label: true, from: false)),
+                Expanded(child: KDecoratedField(label: true, from: false,labelString: AppString.to)),
 
               ],
             ),

@@ -56,13 +56,13 @@ class Device extends StatelessWidget {
                   padding: const EdgeInsets.all(10),
                   child: Row(
 
-                    children: const [
-                      KRowText(
+                    children:  [
+                      const  KRowText(
                         option: AppString.driver,
                         value: 'Sohaib Shah',
                       ),
-                      SizedBox(height: 10.0),
-                      KRowText(option: AppString.date, value: '05-10-22'),
+                      const  SizedBox(height: 10.0),
+                      KRowText(option: AppString.date.toUpperCase(), value: '05-10-22'),
                     ],
                   ),
                 ),
