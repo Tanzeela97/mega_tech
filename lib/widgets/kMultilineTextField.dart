@@ -19,8 +19,8 @@ class KMultiLineTextField extends StatelessWidget {
           const SizedBox(height: 10),
           Row(
             children:  [
-              const SizedBox(width: 40,),
-              const Icon(Icons.message_outlined,size: 28),
+              //const SizedBox(width: 40,),
+             // const Icon(Icons.message_outlined,size: 28),
               const SizedBox(width: 13.0),
               KText(title,textAlign: TextAlign.left)
             ],

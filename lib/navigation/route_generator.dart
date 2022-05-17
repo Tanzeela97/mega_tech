@@ -30,7 +30,7 @@ class RouteGenerator {
 
     switch (settings.name) {
       case RouteString.initial:
-        return MaterialPageRoute(builder: (_) => const SplashView());
+        return MaterialPageRoute(builder: (_) => const MainLayout());
           return MaterialPageRoute(builder: (_) => const MainLayout());
       case RouteString.login:
         return MaterialPageRoute(builder: (_) => const SignInView());

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:megatech/constant/app_string.dart';
 import 'package:megatech/theme/app_color.dart';
 import 'package:megatech/widgets/kAppbar.dart';
+import 'package:megatech/widgets/kMultilineTextField.dart';
 import 'package:megatech/widgets/kText.dart';
 import 'package:megatech/widgets/kTextFieldNonFloatingLabel.dart';
 import 'package:megatech/widgets/kdecoratedField.dart';
@@ -191,13 +192,10 @@ class _VehicleObservationState extends State<VehicleObservation> {
                             data: option,
                             label: AppString
                                 .areAllIndicatorBreakReverseAndHeadLightWorking),
-                        _heightBox,
 
-                        ///pagefour
                       ],
                     ),
                   ),
-
                   ///pageFour
                   Padding(
                     padding:
@@ -210,9 +208,75 @@ class _VehicleObservationState extends State<VehicleObservation> {
                             data: option,
                             label: AppString.isRadiatorFanWorking),
                         _heightBox,
+                        const KText(AppString.rRubber,
+                            fontSize: 24, enumText: EnumText.bold),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.tirePressureOKWheel),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isPaddleRubberGoodCondition),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isWiperRubberGoodCondition),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isWiperWorkingGoodCondition),
+                        _heightBox,
+                        const KText(AppString.otherChecks,
+                            fontSize: 24, enumText: EnumText.bold),
                       ],
                     ),
                   ),
+                  ///pageFive
+                  Padding(
+                    padding:
+                    const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isVehicleDamage),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.vehicleLog),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isExtraTireStepney),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isFirstAidKit),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.areAllSeatBeltsInGoodWorkingConditions),
+                        _heightBox,
+                        const KText(AppString.lastMonthFinding,
+                            fontSize: 24, enumText: EnumText.bold),
+                        _heightBox,
+                        KMultiLineTextField(title: 'title')
+                      ],
+                    ),
+                  ),
+
                 ]),
           ),
           ValueListenableBuilder<int>(

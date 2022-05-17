@@ -59,7 +59,7 @@ abstract class AppString {
   static const selectedVehicle = 'Selected Vehicle';
   static const todaysTrack = 'Today\'s Track';
   static const todayTrack = 'Today Track';
-  static const summary = 'Summary';
+
   static const regNo = 'Reg No.';
   static const mileage = 'Mileage';
   static const topSpeed = 'Top Speed';
@@ -136,9 +136,7 @@ abstract class AppString {
   static const atLeastHalfTank = 'At Least Half Tank :';
   static const trackingReport = 'Tracking Report';
 
-  static const trip = 'Trip';
   static const violationReport = 'Violation Report';
-  static const fuelFillingReport = 'Fuel Filling Report';
   static const fuelTheftReport = 'Fuel Theft Report';
   static const isRadiatorWaterBottleFilledUpToTheLevel =
       'Is Radiator Water Bottle Filled Up To The Level ?';
@@ -157,35 +155,29 @@ abstract class AppString {
       'Are All Indicator, Break, Reverse, & HeadLight Working ?';
   static const isRadiatorFanWorking = 'Is Radiator Fan Working';
   static const tirePressureOKWheel =
-      'Tire pressure OK?(i.e 16cmof wheel base must be in contact with road)';
+      'Tire pressure OK ?(i.e 16cmof wheel base must be in contact with road)';
   static const isPaddleRubberGoodCondition =
-      'Is paddle rubber in good condition';
-  static const isWiperRubberGoodCondition = 'Is wiper rubber in good condition';
+      'Is paddle rubber in good condition ?';
+  static const isWiperRubberGoodCondition = 'Is wiper rubber in good condition ?';
 
   static const isWiperWorkingGoodCondition =
-      'Is wiper working in good condition';
+      'Is wiper working in good condition ?';
 
-  static const rRubber =
-      'R-Rubber';
-  static const otherChecks =
-      'Other Checks';
-  static const isVehicleDamage =
-      'Is Vehicle Damage';
-  static const vehicleLog =
-      'Vehicle Log/Fill On Time';
+  static const rRubber = 'R-Rubber';
+  static const otherChecks = 'Other Checks';
+  static const isVehicleDamage = 'Is Vehicle Damage ?';
+  static const vehicleLog = 'Vehicle Log/Fill On Time ?';
   static const isExtraTireStepney =
-      'Is Extra Tire/Stepney  available in good condition';
+      'Is Extra Tire/Stepney  available in good condition ?';
 
   static const isFirstAidKit =
-      'Is First Aid Kit available with first aid items';
-  static const lastMonthFinding=
-      "What was the  last month's finding?";
+      'Is First Aid Kit available with first aid items ?';
+  static const lastMonthFinding = "What was the  last month's finding ?";
 
-  static const improvementLastMonthFinding=
-      " Is there any  improvement last month's finding?";
+  static const improvementLastMonthFinding =
+      "Is there any  improvement last month's finding ?";
+  static const areAllSeatBeltsInGoodWorkingConditions =
+      "Are All Seat Belts In Good Working Conditions ?";
 
-  static const complete=
-      " Complete";
-
-
+  static const complete = " Complete";
 }
