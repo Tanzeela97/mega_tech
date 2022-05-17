@@ -16,7 +16,7 @@ class _SplashViewState extends State<SplashView> {
   void initState() {
     Timer(
         const Duration(seconds: 10),
-            () =>Navigator.pushReplacementNamed(context, RouteString.login));
+            () =>Navigator.pushReplacementNamed(context, RouteString.boarding));
     super.initState();
   }
   @override

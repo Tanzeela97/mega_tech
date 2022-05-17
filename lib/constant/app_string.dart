@@ -2,6 +2,7 @@
 abstract class AppString {
   static const megaTech = 'Mega Tech';
   static const skip = 'skip';
+  static const trip = 'Trip';
   static const summary = 'Summary';
   static const enterUsernameAndPassword = 'Enter Username & Password';
   static const userName = 'User Name';
@@ -15,6 +16,7 @@ abstract class AppString {
   static const privacyPolicy = 'Privacy Policy';
   static const termAndCondition = 'Term & Condition';
   static const fuel = 'Fuel';
+  static const fuelFillingReport = 'Fuel Filling Report';
   static const currentPosition = 'Current Position';
   static const fuelMonitoring = 'Fuel Monitoring';
   static const show = 'Show';
@@ -39,11 +41,11 @@ abstract class AppString {
   static const email = 'Email:';
   static const serviceType = 'Service Type:';
   static const reason = 'Reason:';
-  static const dayStart= 'Day Start';
-  static const device= 'Devices';
-  static const driver= 'DRIVER';
-  static const date= 'Date';
-  static const currentLocation= 'CURRENT LOCATION';
+  static const dayStart = 'Day Start';
+  static const device = 'Devices';
+  static const driver = 'DRIVER';
+  static const date = 'Date';
+  static const currentLocation = 'CURRENT LOCATION';
   static const preInfo = 'Pre-Info';
   static const infoRemarks = 'Info Remarks';
   static const marketObservation = 'Market Observation';
@@ -63,6 +65,7 @@ abstract class AppString {
   static const avgSpeed = 'Avg. Speed';
   static const secureParking = 'Secure Parking';
   static const note = 'Note';
+
   ///drivingObservation
   static const drivingObservation = 'Driving Observation';
   static const driverId = 'Driver ID :';
@@ -100,28 +103,38 @@ abstract class AppString {
   static const safeDistanceBack = 'Safe Distance Back';
   static const safeDistanceFront = 'Safe Distance Front';
   static const breaks = 'Breaks';
-  static const comments  = 'Comments';
-  static const maintainingSafeDistanceFromOtherVehiclesFront  = 'Maintaining Safe Distance From Other Vehicles-Front ?';
-  static const maintainingSafeDistanceFromOtherVehiclesSide  = 'Maintaining Safe Distance From Other Vehicles-Side ?';
-  static const maintainingSafeDistanceFromOtherVehiclesBack  = 'Maintaining Safe Distance From Other Vehicles-back ?';
-  static const distanceMaintainBeforePressingBreak  = 'Distance Maintain Before Pressing Break ?';
-  static const description  = 'description';
-  static const distance  = 'Distance';
-  static const maintainingThreeSecondDistance  = 'Maintaining Three Second Distance ?';
-  static const inspection  = 'Inspection';
-  static const carInspectionBeforeStartingAJourney  = 'Car Inspection Before Starting A Journey ?';
-  static const fuelManagement  = 'Fuel Management';
-  static const amountPaid  = 'Amount Paid';
-  static const trackHistory  = 'Track History';
-  static const vehicleObservation  = 'Vehicle Observation';
-  static const lastObservationDate  = 'Last Observation :';
-  static const name  = 'Name :';
-  static const employee  = 'Employee :';
-  static const vehicle  = 'Vehicle :';
-  static const pPetrol  = 'P-Petrol :';
-  static const atLeastHalfTank  = 'At Least Half Tank :';
-  static const delayedPassengerSeatBelt = 'Delayed Passenger Seat Belt:';
-
-
+  static const comments = 'Comments';
+  static const maintainingSafeDistanceFromOtherVehiclesFront = 'Maintaining Safe Distance From Other Vehicles-Front ?';
+  static const maintainingSafeDistanceFromOtherVehiclesSide = 'Maintaining Safe Distance From Other Vehicles-Side ?';
+  static const maintainingSafeDistanceFromOtherVehiclesBack = 'Maintaining Safe Distance From Other Vehicles-back ?';
+  static const distanceMaintainBeforePressingBreak = 'Distance Maintain Before Pressing Break ?';
+  static const description = 'description';
+  static const distance = 'Distance';
+  static const maintainingThreeSecondDistance = 'Maintaining Three Second Distance ?';
+  static const inspection = 'Inspection';
+  static const carInspectionBeforeStartingAJourney = 'Car Inspection Before Starting A Journey ?';
+  static const fuelManagement = 'Fuel Management';
+  static const amountPaid = 'Amount Paid';
+  static const trackHistory = 'Track History';
+  static const vehicleObservation = 'Vehicle Observation';
+  static const lastObservationDate = 'Last Observation :';
+  static const name = 'Name :';
+  static const employee = 'Employee :';
+  static const vehicle = 'Vehicle :';
+  static const pPetrol = 'P-Petrol :';
+  static const atLeastHalfTank = 'At Least Half Tank :';
+  static const trackingReport = 'Tracking Report';
+  static const violationReport = 'Violation Report';
+  static const fuelTheftReport = 'Fuel Theft Report';
+  static const isRadiatorWaterBottleFilledUpToTheLevel = 'Is Radiator\'s Water Bottle Filled Up To The Level ?';
+  static const isWindScreenWaterBottleFilledUpToTheLevel = 'Is Radiator Water Bottle Filled Up To The Level ?';
+  static const oOil = 'O-Oil';
+  static const isEngineOilGreaterThanToTheLevel = 'Is Engine Oil Greater Than To The Level ?';
+  static const isBrakeMCylReservoirUpToTheLevel = 'Is Brake M/Cyl Reservoir Up To The Level ?';
+  static const isClutchMCylReservoirUpToTheLevel = 'Is Clutch M/Cyl Reservoir Up To The Level ?';
+  static const eElectricity = 'E-Electricity';
+  static const isIgnitionSwitchWorking = 'Is Ignition Switch Working ?';
+  static const areAllIndicatorBreakReverseAndHeadLightWorking = 'Are All Indicator, Break, Reverse, & HeadLight Working ?';
+  static const isRadiatorFanWorking = 'Is Radiator Fan Working';
 
 }

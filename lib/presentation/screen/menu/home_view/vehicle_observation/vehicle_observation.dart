@@ -34,10 +34,14 @@ class _VehicleObservationState extends State<VehicleObservation> {
           color: isActive ? AppColor.lightBlue : Colors.grey[200]),
     );
   }
+
   final ValueNotifier<int> pageIndex = ValueNotifier(0);
   final ValueNotifier<int> radioOne = ValueNotifier(0);
   static const _widthBox = SizedBox(width: 10);
   static const _heightBox = SizedBox(height: 20);
+  static const option = ['Yes', 'No'];
+  static const optionTwo = ['Good', 'ok', 'No'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,55 +97,138 @@ class _VehicleObservationState extends State<VehicleObservation> {
                           ],
                         ),
                         _heightBox,
-                       const  KTextFieldNonFloatingLabel(
+                        const KTextFieldNonFloatingLabel(
                             label: AppString.businessGroup),
                         _heightBox,
-                        const  KTextFieldNonFloatingLabel(label: AppString.designation),
+                        const KTextFieldNonFloatingLabel(
+                            label: AppString.designation),
                         _heightBox,
-                        const KTextFieldNonFloatingLabel(label: AppString.lineManager),
+                        const KTextFieldNonFloatingLabel(
+                            label: AppString.lineManager),
                         _heightBox,
-                        const  KTextFieldNonFloatingLabel(label: AppString.region),
+                        const KTextFieldNonFloatingLabel(
+                            label: AppString.region),
                       ],
                     ),
                   ),
+
                   ///pageTwo
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                    padding:
+                        const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const    KText('Assessee',
+                        const KText('Assessee',
                             fontSize: 24, enumText: EnumText.bold),
                         _heightBox,
-                        const     KTextFieldNonFloatingLabel(label: AppString.name),
+                        const KTextFieldNonFloatingLabel(label: AppString.name),
                         _heightBox,
-                        const    KTextFieldNonFloatingLabel(label: AppString.employee),
+                        const KTextFieldNonFloatingLabel(
+                            label: AppString.employee),
                         _heightBox,
-                        const    KTextFieldNonFloatingLabel(label: AppString.vehicle),
+                        const KTextFieldNonFloatingLabel(
+                            label: AppString.vehicle),
                         _heightBox,
-                        const     KText(AppString.pPetrol,
+                        const KText(AppString.pPetrol,
                             fontSize: 24, enumText: EnumText.bold),
                         _heightBox,
                         KDecoratedFieldRadio(
-                            radioNotifier: radioOne, data: const ['Yes', 'No'],label: AppString.observeAllSide),
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.atLeastHalfTank),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString
+                                .isRadiatorWaterBottleFilledUpToTheLevel),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString
+                                .isWindScreenWaterBottleFilledUpToTheLevel),
+                      ],
+                    ),
+                  ),
+
+                  ///pageThree
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const KText(AppString.oOil,
+                            fontSize: 24, enumText: EnumText.bold),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isEngineOilGreaterThanToTheLevel),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isBrakeMCylReservoirUpToTheLevel),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isClutchMCylReservoirUpToTheLevel),
+                        _heightBox,
+                        const KText(AppString.eElectricity,
+                            fontSize: 24, enumText: EnumText.bold),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isIgnitionSwitchWorking),
+                        _heightBox,
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString
+                                .areAllIndicatorBreakReverseAndHeadLightWorking),
+                        _heightBox,
+
+                        ///pagefour
+                      ],
+                    ),
+                  ),
+
+                  ///pageFour
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        KDecoratedFieldRadio(
+                            radioNotifier: radioOne,
+                            data: option,
+                            label: AppString.isRadiatorFanWorking),
+                        _heightBox,
                       ],
                     ),
                   ),
                 ]),
-              ),
-              ValueListenableBuilder<int>(
-                  valueListenable: pageIndex,
-                  builder: (_, value, child) => Row(
+          ),
+          ValueListenableBuilder<int>(
+              valueListenable: pageIndex,
+              builder: (_, value, child) => Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       pageIndicator(0 == value),
                       pageIndicator(1 == value),
+                      pageIndicator(2 == value),
+                      pageIndicator(3 == value),
+                      pageIndicator(4 == value),
                     ],
                   ))
-            ],
-        ),
+        ],
       ),
-    );
+      ),);
   }
-
 }

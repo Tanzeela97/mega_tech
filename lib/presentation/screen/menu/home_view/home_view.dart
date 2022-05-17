@@ -86,6 +86,10 @@ class _HomeState extends State<Home> {
             imageProvider: ImageString.trackHistory,
             string: AppString.vehicleObservation,
             routeString: RouteString.vehicleObservation),
+        CategoryBox(
+            imageProvider: ImageString.trackHistory,
+            string: AppString.trackingReport,
+            routeString: RouteString.trackingReport),
       ],
     );
   }

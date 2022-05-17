@@ -18,5 +18,6 @@ abstract class RouteString{
   static const fuelManagement = '/fuelManagement';
   static const trackHistory = '/trackHistory';
   static const vehicleObservation  = '/vehicleObservation';
+  static const trackingReport  = '/trackingReport';
 
 }

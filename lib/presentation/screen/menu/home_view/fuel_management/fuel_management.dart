@@ -22,7 +22,7 @@ class _FuelManagementState extends State<FuelManagement> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const KAppBar(
-          title: KText(AppString.fuelMonitoring,
+          title: KText(AppString.fuelManagement,
               color: AppColor.white, fontSize: 28.0)),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
