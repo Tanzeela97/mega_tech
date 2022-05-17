@@ -85,7 +85,7 @@ class _TripVState extends State<TripV> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (_) =>
-                                    const _FuelMonitoringListing()));
+                                        const _FuelMonitoringListing()));
                           }),
                     ]),
               );
@@ -101,6 +101,7 @@ class _FuelMonitoringListing extends StatelessWidget {
   const _FuelMonitoringListing({Key? key}) : super(key: key);
   static const _heightBox = SizedBox(height: 20);
   static const _widthBox = SizedBox(width: 10);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -118,22 +119,68 @@ class _FuelMonitoringListing extends StatelessWidget {
             _heightBox,
             Row(
               children: const [
-                Expanded(child: KTextFieldNonFloatingLabel(label: AppString.vehicle)),
+                Expanded(
+                    child:
+                        KTextFieldNonFloatingLabel(label: AppString.vehicle)),
                 _widthBox,
-                Expanded(child: KTextFieldNonFloatingLabel(label: AppString.regNo)),
+                Expanded(
+                    child: KTextFieldNonFloatingLabel(label: AppString.regNo)),
               ],
             ),
             _heightBox,
             Row(
               children: const [
-                Expanded(child: KTextFieldNonFloatingLabel(label: AppString.totalMileage)),
+                Expanded(
+                    child: KTextFieldNonFloatingLabel(
+                        label: AppString.totalMileage)),
                 _widthBox,
-                Expanded(child: KTextFieldNonFloatingLabel(label: AppString.avgSpeedTrip)),
+                Expanded(
+                    child: KTextFieldNonFloatingLabel(
+                        label: AppString.avgSpeedTrip)),
               ],
             ),
             _heightBox,
-            for(var i=0;i<5;i++)
-              
+            //for(var i=0;i<5;i++)
+            SizedBox(
+              height: 250,
+              width: double.infinity,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12.0),
+                child: Column(
+                  children: [
+                    Expanded(
+                        child: Container(
+                      color: AppColor.textFieldColor,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        child: Row(
+                          children: [
+                            KText('Trip 1', fontSize: 18),
+                            Spacer(),
+                            TextButton(
+                                onPressed: () {},
+                                child: KText(AppString.view, fontSize: 18))
+                          ],
+                        ),
+                      ),
+                    )),
+                    Expanded(
+                        flex: 3,
+                        child: Column(
+                          children: [
+                            ListTile(
+                                title: KText('Start'),
+                                subtitle: KText('subtitle'),dense: true),
+                            ListTile(
+                                title: KText('End'),
+                                subtitle: KText('subtitle'),dense: true),
+                            
+                          ],
+                        )),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
