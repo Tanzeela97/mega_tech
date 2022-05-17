@@ -90,42 +90,39 @@ class KDecoratedFieldRadio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(16.0),
-      child: ListTile(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16.0),
-        ),
-        title: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8),
-          child: KText(label),
-        ),
-        tileColor: Colors.grey[200],
-        subtitle: ValueListenableBuilder<int>(
-            valueListenable: radioNotifier,
-            builder: (context, value, child) {
-              return Row(
-                children: <Widget>[
-                  for (int i = 0; i < data.length; i++)
-                    Row(
-                      children: [
-                        Radio<int>(
-                          value: i,
-                          materialTapTargetSize: MaterialTapTargetSize
-                              .shrinkWrap,
-                          groupValue: radioNotifier.value,
-                          activeColor: AppColor.blue,
-                          onChanged: (value) {
-                            radioNotifier.value = value!;
-                          },
-                        ),
-                        KText(data[i]),
-                      ],
-                    )
-                ],
-              );
-            }
-        ),
+    return ListTile(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16.0),
+      ),
+      title: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: KText(label),
+      ),
+      tileColor: Colors.grey[200],
+      subtitle: ValueListenableBuilder<int>(
+          valueListenable: radioNotifier,
+          builder: (context, value, child) {
+            return Row(
+              children: <Widget>[
+                for (int i = 0; i < data.length; i++)
+                  Row(
+                    children: [
+                      Radio<int>(
+                        value: i,
+                        materialTapTargetSize: MaterialTapTargetSize
+                            .shrinkWrap,
+                        groupValue: radioNotifier.value,
+                        activeColor: AppColor.blue,
+                        onChanged: (value) {
+                          radioNotifier.value = value!;
+                        },
+                      ),
+                      KText(data[i]),
+                    ],
+                  )
+              ],
+            );
+          }
       ),
     );
   }

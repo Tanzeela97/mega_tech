@@ -85,7 +85,7 @@ class _TripVState extends State<TripV> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (_) =>
-                                        const _FuelMonitoringListing()));
+                                    const _FuelMonitoringListing()));
                           }),
                     ]),
               );
@@ -99,7 +99,8 @@ class _TripVState extends State<TripV> {
 
 class _FuelMonitoringListing extends StatelessWidget {
   const _FuelMonitoringListing({Key? key}) : super(key: key);
-
+  static const _heightBox = SizedBox(height: 20);
+  static const _widthBox = SizedBox(width: 10);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,12 +108,32 @@ class _FuelMonitoringListing extends StatelessWidget {
           title: KText(AppString.trip, color: AppColor.white, fontSize: 28.0)),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
+        child: ListView(
           children: [
             Align(
                 alignment: Alignment.topRight,
                 child: KElevatedButton(string: 'PDF', width: 80, onTap: () {})),
-            KTextFieldNonFloatingLabel(label: AppString.driver)
+            _heightBox,
+            const KTextFieldNonFloatingLabel(label: AppString.driver),
+            _heightBox,
+            Row(
+              children: const [
+                Expanded(child: KTextFieldNonFloatingLabel(label: AppString.vehicle)),
+                _widthBox,
+                Expanded(child: KTextFieldNonFloatingLabel(label: AppString.regNo)),
+              ],
+            ),
+            _heightBox,
+            Row(
+              children: const [
+                Expanded(child: KTextFieldNonFloatingLabel(label: AppString.totalMileage)),
+                _widthBox,
+                Expanded(child: KTextFieldNonFloatingLabel(label: AppString.avgSpeedTrip)),
+              ],
+            ),
+            _heightBox,
+            for(var i=0;i<5;i++)
+              
           ],
         ),
       ),
