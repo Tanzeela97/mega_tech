@@ -88,8 +88,8 @@ class _DrivingObservationState extends State<DrivingObservation> {
                         ],
                       ),
                       _heightBox,
-                      KDecoratedDropDown(
-                          data:, label: AppString.businessGroup, dropDown:),
+                      // KDecoratedDropDown(
+                      //     data:, label: AppString.businessGroup),
                       const KTextFieldNonFloatingLabel(
                           label: AppString.businessGroup,
                           iconData: Icons.keyboard_arrow_down),

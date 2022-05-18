@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:megatech/constant/app_string.dart';
 import 'package:megatech/constant/image_string.dart';
 import 'package:megatech/presentation/screen/menu/home_view/tracking_report/trip.dart';
+import 'package:megatech/presentation/screen/menu/home_view/tracking_report/violation_report.dart';
 import 'package:megatech/theme/app_color.dart';
 import 'package:megatech/widgets/kAppbar.dart';
 import 'package:megatech/widgets/kText.dart';
@@ -37,11 +38,13 @@ class _TrackingReportState extends State<TrackingReport> {
             _heightBox,
             _tile(
                 string: AppString.violationReport,
-                imageProvider: ImageString.fuelPrice),
-            _heightBox,
-            _tile(string: AppString.fuelFillingReport, imageProvider: ImageString.fuelTwo),
-            _heightBox,
-            _tile(string: AppString.fuelTheftReport, imageProvider: ImageString.fuelTwo),
+                imageProvider: ImageString.fuelPrice,onTap:(){
+              Navigator.push(context, MaterialPageRoute(builder: (_)=>const ViolationReport()));
+            } ),
+            // _heightBox,
+            // _tile(string: AppString.fuelFillingReport, imageProvider: ImageString.fuelTwo),
+            // _heightBox,
+            // _tile(string: AppString.fuelTheftReport, imageProvider: ImageString.fuelTwo),
 
           ],
         ),

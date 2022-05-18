@@ -164,18 +164,74 @@ class _FuelMonitoringListing extends StatelessWidget {
                         ),
                       ),
                     )),
+
                     Expanded(
                         flex: 3,
-                        child: Column(
-                          children: [
-                            ListTile(
-                                title: KText('Start'),
-                                subtitle: KText('subtitle'),dense: true),
-                            ListTile(
-                                title: KText('End'),
-                                subtitle: KText('subtitle'),dense: true),
-                            
-                          ],
+                        child: Container(
+                          color: Colors.orange[50],
+                          child: Column(
+                            children: [
+                              const ListTile(
+                                  title: KText('Start'),
+                                  subtitle: KText('subtitle'),dense: true),
+                              const ListTile(
+                                  title: KText('End'),
+                                  subtitle: KText('subtitle'),dense: true),
+                              ListTile(
+                                dense: true,
+                                leading: Wrap(
+                                  spacing: 25,
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        KText('Duration'),
+                                        KText('HH:MM:SS'),
+                                      ],
+                                    ),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: const [
+                                        KText('Distance'),
+                                        KText('1.471km/hr'),
+                                      ],
+                                    ),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: const [
+                                        KText('Top Speed'),
+                                        KText('241.471 km/hr'),
+                                      ],
+                                    ),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: const [
+                                        KText('Avg. Speed'),
+                                        KText('241.471 km/hr'),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                // trailing: Column(
+                                //   crossAxisAlignment: CrossAxisAlignment.start,
+                                //   children: [
+                                //     KText('Distance'),
+                                //     KText('1.47 k/mhr'),
+                                //   ],
+                                // ),
+                              ),
+                              // ListTile(
+                              //   dense: true,
+                              //   leading: Column(
+                              //     crossAxisAlignment: CrossAxisAlignment.start,
+                              //     children: [
+                              //       KText('Speed'),
+                              //       KText(''),
+                              //     ],
+                              //   ),
+                              // ),
+                            ],
+                          ),
                         )),
                   ],
                 ),
