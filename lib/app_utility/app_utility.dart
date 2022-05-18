@@ -7,7 +7,7 @@ class AppUtility {
 
   static String? timeFormat(TimeOfDay? timeOfDay) => timeOfDay == null
       ? null
-      : '${timeOfDay.hour.prefixWith()}:${timeOfDay.minute.prefixWith()}:${timeOfDay.period.name}';
+      : '${timeOfDay.hour}:${timeOfDay.minute.prefixWith()}:${timeOfDay.period.name}';
 }
 
 extension ExtendedString on int {

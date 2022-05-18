@@ -35,7 +35,7 @@ class DecoratedDropDown extends StatelessWidget {
             InputDecorator(
               decoration:  InputDecoration(
                 filled: true,
-                fillColor: Colors.grey[200],
+                fillColor: Colors.grey[350],
                 prefixIcon: prefixIcon,
                 // border: const OutlineInputBorder(),
                 enabledBorder: const OutlineInputBorder(
@@ -46,6 +46,7 @@ class DecoratedDropDown extends StatelessWidget {
                 // focusedBorder:
                 // const OutlineInputBorder(borderSide: BorderSide(color: Colors.teal)),
                 hintText: hintText,
+                hintStyle: const TextStyle(color: Colors.black),
               ),
               isEmpty: value.isEmpty,
               child: DropdownButtonHideUnderline(

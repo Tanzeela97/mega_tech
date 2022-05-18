@@ -19,36 +19,37 @@ class _SignInViewState extends State<SignInView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Form(
-          key: _formKey,
-          child: Column(
-            children: [
-              TweenAnimationBuilder<double>(
-                  duration: const Duration(milliseconds: 500),
-                  tween: Tween(begin: 0.0, end: 1.0),
-                  builder: (_, value, child) {
-                    return Padding(
-                      padding: EdgeInsets.only(top: 10 * value),
-                      child: Opacity(opacity: value, child: child),
-                    );
-                  },
-                  child: const SizedBox(
-                      height: 230,
-                      child: Image(image: ImageString.logo))),
-              const KText(AppString.enterUsernameAndPassword,
-                  textAlign: TextAlign.center,
-                  fontSize: 22,
-                  enumText: EnumText.bold),
-              const SizedBox(height: 52.0),
-              const KTextField(label: AppString.userName),
-              const SizedBox(height: 10.0),
-              const KTextField(label: AppString.password),
-              const SizedBox(height: 45.0),
-              KElevatedButton(string: AppString.signIn,onTap: (){
-                Navigator.pushReplacementNamed(context, RouteString.layout);
-              }),
-            ],
-          ),
+        child: Column(
+          children: [
+            TweenAnimationBuilder<double>(
+                duration: const Duration(milliseconds: 500),
+                tween: Tween(begin: 0.0, end: 1.0),
+                builder: (_, value, child) {
+                  return Padding(
+                    padding: EdgeInsets.only(top: 150 * value),
+                    child: Opacity(opacity: value, child: child),
+                  );
+                },
+                child: const SizedBox(
+                    height: 150,
+
+                    child: Image(image: ImageString.logo))),
+            const KText(AppString.enterUsernameAndPassword,
+                textAlign: TextAlign.center,
+                fontSize: 22,
+                enumText: EnumText.bold),
+            const SizedBox(height: 52.0),
+             const KTextField(label: AppString.userName,
+               ),
+            const SizedBox(height: 10.0),
+            const KTextField(label: AppString.password),
+            const SizedBox(height: 45.0),
+            KElevatedButton(string: AppString.signIn,onTap: (){
+              Navigator.pushReplacementNamed(context, RouteString.layout);
+
+            }),
+
+          ],
         ),
       ),
     );

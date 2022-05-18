@@ -9,7 +9,7 @@ class KElevatedButton extends StatelessWidget {
   final VoidCallback? onTap;
 
   const KElevatedButton(
-      {Key? key, this.width = 230, required this.string, this.onTap})
+      {Key? key, this.width = 320, required this.string, this.onTap})
       : super(key: key);
 
   @override
@@ -25,6 +25,7 @@ class KElevatedButton extends StatelessWidget {
           onPressed: onTap,
           child: KText(
             string,
+            fontSize: 18,
             color: AppColor.white,
             enumText: EnumText.bold,
           )),

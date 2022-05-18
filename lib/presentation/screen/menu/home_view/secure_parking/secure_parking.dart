@@ -105,13 +105,19 @@ class _SecureParkingState extends State<SecureParking> {
               decoration: BoxDecoration(
                   color: Colors.grey, borderRadius: BorderRadius.circular(2.0)),
             ),
-            const KText(AppString.note + '!',
+            const SizedBox(
+              height: 10,
+            ),
+            const KText(AppString.note +'!',
                 fontSize: 28, enumText: EnumText.bold, color: AppColor.grey),
+            const SizedBox(
+              height: 10,
+            ),
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 22.0, vertical: 2),
+              padding: EdgeInsets.symmetric(horizontal: 45.0, vertical: 2),
               child: KText(
-                  'killing the engine of a mobile  vehicle may cauase an accident make sure kill engine is done on a already parked vehicle',
-                  fontSize: 28,
+                  'Killing the Engine of A Mobile  Vehicle May Cause An Accident Make Sure Kill Engine Is Done On An Already Parked Vehicle',
+                  fontSize: 26,
                   enumText: EnumText.light,
                   color: AppColor.grey),
             ),

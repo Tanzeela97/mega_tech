@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:megatech/constant/route_string.dart';
 
-
-import 'package:megatech/presentation/menu/home_view/admin_trip/admin_trip.dart';
-
-import 'package:megatech/presentation/menu/home_view/device/device.dart';
-
-
-
 import 'package:megatech/presentation/screen/main_layout.dart';
 import 'package:megatech/presentation/screen/menu/home_view/applied_leave/applied_leave.dart';
 import 'package:megatech/presentation/screen/menu/home_view/current_position/current_position.dart';
@@ -25,7 +18,9 @@ import 'package:megatech/presentation/screen/menu/home_view/vehicle_observation/
 import 'package:megatech/presentation/screen/signIn_view/signIn_view.dart';
 import 'package:megatech/presentation/screen/splash_view/splash_view.dart';
 
-
+import '../presentation/screen/menu/home_view/admin_trip/admin_trip.dart';
+import '../presentation/screen/menu/home_view/device/device.dart';
+import '../presentation/screen/signIn_view/signIn_view.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -34,17 +29,16 @@ class RouteGenerator {
 
     switch (settings.name) {
       case RouteString.initial:
-        //return MaterialPageRoute(builder: (_) => const SplashView());
+        return MaterialPageRoute(builder: (_) => const SplashView());
           return MaterialPageRoute(builder: (_) => const MainLayout());
-        return MaterialPageRoute(builder: (_) => const FeedBack());
       case RouteString.login:
         return MaterialPageRoute(builder: (_) => const SignInView());
-      case RouteString.layout:
+        case RouteString.layout:
         return MaterialPageRoute(builder: (_) => const MainLayout());
       case RouteString.fuel:
         return MaterialPageRoute(builder: (_) => const FuelMonitoring());
       case RouteString.appliedLeave:
-        return MaterialPageRoute(builder: (_) => const AppliedLeave());
+        return MaterialPageRoute(builder: (_) => AppliedLeave());
       case RouteString.feedback:
         return MaterialPageRoute(builder: (_) => const FeedBack());
 
@@ -52,7 +46,6 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const AdminTrip());
       case RouteString.device:
         return MaterialPageRoute(builder: (_) => const Device());
-
       case RouteString.preInfo:
         return MaterialPageRoute(builder: (_) => const PreInfo());
       case RouteString.marketObservation:

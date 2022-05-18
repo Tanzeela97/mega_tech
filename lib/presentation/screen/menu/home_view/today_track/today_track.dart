@@ -22,7 +22,7 @@ class _TodayTrackState extends State<TodayTrack> {
     target: LatLng(37.42796133580664, -122.085749655962),
     zoom: 14.4746,
   );
-
+  ValueNotifier<String> valueNotifier =ValueNotifier('');
   void _showBottomSheet(BuildContext _) async {
     await showModalBottomSheet(
       context: context,
@@ -43,7 +43,7 @@ class _TodayTrackState extends State<TodayTrack> {
               decoration: BoxDecoration(
                   color: Colors.grey, borderRadius: BorderRadius.circular(2.0)),
             ),
-            const KText(AppString.summery,
+            const KText(AppString.summary,
                 fontSize: 28, enumText: EnumText.bold, color: AppColor.grey),
             _info(AppString.regNo, value: 'SSS-777'),
             _info(AppString.mileage, value: '2.2 KM'),
@@ -76,7 +76,7 @@ class _TodayTrackState extends State<TodayTrack> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const KAppBar(
-          title: KText(AppString.currentPosition,
+          title: KText(AppString.todayTrack,
               color: AppColor.white, fontSize: 28.0)),
       body: Stack(
         children: [
@@ -89,24 +89,60 @@ class _TodayTrackState extends State<TodayTrack> {
             },
           ),
           Positioned(
-            height: 40,
-            top: 150,
-            left: 20,
-            child: PhysicalModel(
-              color: AppColor.black.withOpacity(0.1),
-              elevation: 8.0,
-              shadowColor: AppColor.black,
-              shape: BoxShape.circle,
-              child: SizedBox(
-                child: InkWell(
-                  onTap: () {
-                    _showBottomSheet(context);
-                  },
-                  child: const Image(image: ImageString.info),
+            top: 75,
+
+
+            child:  Column(
+              children:[
+
+                Container(
+                  height: 45,
+                  width: 45,
+                  child: PhysicalModel(
+                    color: AppColor.black.withOpacity(0.3),
+                    elevation: 6.0,
+                    shadowColor: AppColor.black,
+                    shape: BoxShape.circle,
+                    child:  SizedBox(
+
+                        child: InkWell(
+                          onTap: () {
+                            _showBottomSheet(context);
+                          },
+                          child: const Image(image: ImageString.info),
+                        ),
+                      ),
+                    ),
                 ),
-              ),
+                const SizedBox(height: 10,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Chip(
+                    backgroundColor: AppColor.blue,
+                    label: ValueListenableBuilder<String>(
+                      valueListenable: valueNotifier,
+                      builder: (_,value,child)=>DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(icon: const Icon(Icons.keyboard_arrow_down_outlined,color: AppColor.white),
+                            value: value.isEmpty ? null : value,
+                            isDense: true,
+                            hint: const KText(AppString.selectedVehicle,color: AppColor.white),
+                            items: ['list1','list2','list3',]
+                                .map((e) => DropdownMenuItem(child: KText(e), value: e))
+                                .toList(),
+                            onChanged: (val) {
+                              valueNotifier.value = val!;
+                            },
+                          )),
+                    ),
+                  ),
+                ),
+           ] ),
+
+
+
+
             ),
-          ),
+
         ],
       ),
     );

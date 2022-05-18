@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../constant/app_string.dart';
-import '../../../../theme/app_color.dart';
-import '../../../../widgets/kAppbar.dart';
-import '../../../../widgets/kText.dart';
+import '../../../../../constant/app_string.dart';
+import '../../../../../theme/app_color.dart';
+import '../../../../../widgets/kAppbar.dart';
+import '../../../../../widgets/kText.dart';
+
 
 class Device extends StatelessWidget {
   const Device({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class Device extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const KAppBar(
+      appBar: const  KAppBar(
           title:
               KText(AppString.device, color: AppColor.white, fontSize: 28.0)),
       body: Padding(
@@ -31,7 +32,7 @@ class Device extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.only(topLeft: Radius.circular(10),topRight:Radius.circular(10) ),
-                    color: Colors.grey[500]!,
+                    color: Colors.grey[400]!,
                   ),
                   child: Row(
                     children:  [

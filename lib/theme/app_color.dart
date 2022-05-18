@@ -9,4 +9,5 @@ abstract class AppColor{
   static const black =Color(0xff000000);
   static const blue =Color(0xff319AD5);
   static const lightBlue =Color(0xff86D5F6);
+  static final  textFieldColor =Colors.grey[350];
 }

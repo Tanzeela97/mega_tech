@@ -11,19 +11,18 @@ class KMultiLineTextField extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-          color: Colors.grey[200],
+          color: Colors.grey[100],
           borderRadius: BorderRadius.circular(8.0),
           border: Border.all(color: AppColor.lightBlue)),
       child: Column(
         children: [
           const SizedBox(height: 10),
           Row(
-            //mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
             children:  [
-              iconData==null?const SizedBox.shrink():const Icon(Icons.message_outlined,size: 28),
+              const SizedBox(width: 40,),
+              const Icon(Icons.message_outlined,size: 28),
               const SizedBox(width: 13.0),
-              KText(title)
+              KText(title,textAlign: TextAlign.left)
             ],
           ),
           TextField(

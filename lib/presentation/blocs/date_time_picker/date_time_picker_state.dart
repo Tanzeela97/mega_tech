@@ -25,7 +25,7 @@ class DateTimePickerInitial {
 
   @override
   String toString() {
-    return 'DateTimePickerInitial{timeOfDay: $timeOfDay, dateTime: $dateTime, showError: $showError}';
+    return '{DateTimePickerInitial{timeOfDay: $timeOfDay, dateTime: $dateTime, showError: $showError}';
   }
 
   DateTimePickerInitial copyWith({

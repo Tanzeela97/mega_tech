@@ -53,7 +53,7 @@ class _CurrentPositionState extends State<CurrentPosition> {
               label: ValueListenableBuilder<String>(
                 valueListenable: valueNotifier,
                 builder: (_,value,child)=>DropdownButtonHideUnderline(
-                    child: DropdownButton<String>(icon: Icon(Icons.keyboard_arrow_down_outlined,color: AppColor.white),
+                    child: DropdownButton<String>(icon: const Icon(Icons.keyboard_arrow_down_outlined,color: AppColor.white),
                       value: value.isEmpty ? null : value,
                       isDense: true,
                       hint: const KText(AppString.selectedVehicle,color: AppColor.white),

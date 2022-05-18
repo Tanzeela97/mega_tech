@@ -82,17 +82,17 @@ class _DrivingObservationState extends State<DrivingObservation> {
                         ],
                       ),
                       _heightBox,
-                      KTextFieldNonFloatingLabel(
+                      const KTextFieldNonFloatingLabel(
                           label: AppString.businessGroup),
                       _heightBox,
-                      KTextFieldNonFloatingLabel(label: AppString.designation),
+                      const KTextFieldNonFloatingLabel(label: AppString.designation),
                       _heightBox,
-                      KTextFieldNonFloatingLabel(label: AppString.lineManager),
+                      const KTextFieldNonFloatingLabel(label: AppString.lineManager),
                       _heightBox,
-                      KTextFieldNonFloatingLabel(
+                      const KTextFieldNonFloatingLabel(
                           label: AppString.delayedPassenger),
                       _heightBox,
-                      KTextFieldNonFloatingLabel(label: AppString.region),
+                      const KTextFieldNonFloatingLabel(label: AppString.region),
                     ],
                   ),
                 ),
@@ -194,7 +194,7 @@ class _DrivingObservationState extends State<DrivingObservation> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children:const [
-                               KText(AppString.caution,
+                          KText(AppString.caution,
                               fontSize: 24, enumText: EnumText.bold),
                           _widthBox,
                           Icon(Icons.camera_alt_outlined)
@@ -229,7 +229,7 @@ class _DrivingObservationState extends State<DrivingObservation> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                     const  KText(AppString.safeDistanceSide,
+                      const  KText(AppString.safeDistanceSide,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
@@ -259,16 +259,16 @@ class _DrivingObservationState extends State<DrivingObservation> {
           ValueListenableBuilder<int>(
               valueListenable: pageIndex,
               builder: (_, value, child) => Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      pageIndicator(0 == value),
-                      pageIndicator(1 == value),
-                      pageIndicator(2 == value),
-                      pageIndicator(3 == value),
-                      pageIndicator(4 == value),
-                      pageIndicator(5 == value),
-                    ],
-                  ))
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  pageIndicator(0 == value),
+                  pageIndicator(1 == value),
+                  pageIndicator(2 == value),
+                  pageIndicator(3 == value),
+                  pageIndicator(4 == value),
+                  pageIndicator(5 == value),
+                ],
+              ))
         ],
       ),
     );

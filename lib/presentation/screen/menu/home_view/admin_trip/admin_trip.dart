@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:megatech/widgets/kTextFieldNonFloatingLabel.dart';
 import 'package:megatech/widgets/kAppbar.dart';
 
-import '../../../../constant/app_string.dart';
-import '../../../../theme/app_color.dart';
-import '../../../../widgets/kElevatedButton.dart';
-import '../../../../widgets/kText.dart';
-import '../../../../widgets/kTextField.dart';
+import '../../../../../constant/app_string.dart';
+import '../../../../../theme/app_color.dart';
+import '../../../../../widgets/kElevatedButton.dart';
+import '../../../../../widgets/kText.dart';
+
+
 
 class AdminTrip extends StatelessWidget {
   const AdminTrip({Key? key}) : super(key: key);
@@ -78,7 +79,7 @@ class AdminTrip extends StatelessWidget {
                 ),
                 const KTextFieldNonFloatingLabel(label: AppString.reason),
                 const SizedBox(
-                  height: 20,
+                  height: 26,
                 ),
                 KElevatedButton(
                     width: 130, string: AppString.dayStart, onTap: () {})

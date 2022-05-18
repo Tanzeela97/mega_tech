@@ -111,7 +111,7 @@ class _TrackHistoryState extends State<TrackHistory> {
               decoration: BoxDecoration(
                   color: Colors.grey, borderRadius: BorderRadius.circular(2.0)),
             ),
-            const KText(AppString.summery,
+            const KText(AppString.summary,
                 fontSize: 28, enumText: EnumText.bold, color: AppColor.grey),
             _info(AppString.regNo, value: 'SSS-777'),
             _info(AppString.mileage, value: '2.2 KM'),

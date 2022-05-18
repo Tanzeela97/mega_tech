@@ -7,9 +7,10 @@ import '../constant/app_string.dart';
 class KTextField extends StatelessWidget {
   final String label;
   final String? hintText;
+
   final TextEditingController? controller;
   const KTextField(
-      {Key? key, required this.label, this.controller, this.hintText})
+      {Key? key, required this.label, this.controller, this.hintText,})
       : super(key: key);
 
   @override
@@ -20,7 +21,8 @@ class KTextField extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            KText(label, fontSize: 18.0, color: AppColor.grey),
+            Padding(padding: const EdgeInsets.only(left: 12),
+                child: KText(label, fontSize: 18.0, color: AppColor.grey)),
             TextFormField(
               controller: controller,
               decoration: InputDecoration(

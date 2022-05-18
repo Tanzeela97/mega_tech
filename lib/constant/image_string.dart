@@ -14,11 +14,11 @@ abstract class ImageString{
   static const ImageProvider fuelGauge = AssetImage('assets/fuel_gauge.png');
   static const ImageProvider currentPosition = AssetImage('assets/current_position.png');
   static const ImageProvider feedback = AssetImage('assets/feedback.png');
-  static const ImageProvider leave = AssetImage('assets/leave.png');
+  static const ImageProvider appliedLeave = AssetImage('assets/leave.png');
   static const ImageProvider info = AssetImage('assets/info.png');
   static const ImageProvider market = AssetImage('assets/market.png');
   static const ImageProvider gps = AssetImage('assets/gps.png');
-  static const ImageProvider appliedLeave = AssetImage('assets/appliedLeave.png');
+  static const ImageProvider leave = AssetImage('assets/appliedLeave.png');
   static const ImageProvider track = AssetImage('assets/track.png');
   static const ImageProvider adminTrip = AssetImage('assets/adminTrip.png');
   static const ImageProvider location = AssetImage('assets/location.png');

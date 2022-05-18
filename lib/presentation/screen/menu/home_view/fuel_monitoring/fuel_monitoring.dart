@@ -55,39 +55,43 @@ class _FuelMonitoringState extends State<FuelMonitoring> {
                           label: true,
                           from: true,
                           labelString: AppString.from,
+                         //from: true,
                           value: AppUtility.dateFormat(fromState.dateTime),
                           callback: () {
                             fromBloc.add(PickDate(context: context));
-                          }),
+                          },),
                       KDecoratedField(
                           label: false,
                           from: true,
                           labelString: '',
+                         // from: true,
                           value: AppUtility.timeFormat(fromState.timeOfDay),
                           callback: () {
                             fromBloc.add(PickTime(context: context));
-                          }),
+                          },),
                       KDecoratedField(
                           label: true,
                           from: false,
                           labelString: AppString.to,
+                          //from: false,
                           value: AppUtility.dateFormat(toState.dateTime),
                           callback: () {
                             toBloc.add(PickDate(context: context));
-                          }),
+                          },),
                       KDecoratedField(
                           label: false,
                           from: true,
                           labelString: '',
+                         // from: true,
                           value: AppUtility.timeFormat(toState.timeOfDay),
                           callback: () {
                             toBloc.add(PickTime(context: context));
-                          }),
+                          }, ),
                     ],
                   ),
                   const SizedBox(height: 26.0),
                   KElevatedButton(
-                      width: 130,
+                      width: 140,
                       string: AppString.show,
                       onTap: () {
                         Navigator.push(
@@ -132,7 +136,7 @@ class _FuelMonitoringListing extends StatelessWidget {
                         child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       decoration: BoxDecoration(
-                          color: Colors.grey[200],
+                          color: Colors.grey[350],
                           borderRadius: const BorderRadius.only(
                               topRight: Radius.circular(16.0),
                               topLeft: Radius.circular(16.0))),
@@ -170,7 +174,7 @@ class _FuelMonitoringListing extends StatelessWidget {
                           children: [
                             KText(AppString.fuel.toUpperCase(),
                                 color: AppColor.grey),
-                            KText('6.8 Ltr', enumText: EnumText.bold),
+                            const KText('6.8 Ltr', enumText: EnumText.bold),
                           ],
                         ),
                       ),

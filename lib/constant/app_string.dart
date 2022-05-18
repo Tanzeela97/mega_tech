@@ -1,6 +1,8 @@
+
 abstract class AppString {
   static const megaTech = 'Mega Tech';
   static const skip = 'skip';
+  static const summary = 'Summary';
   static const enterUsernameAndPassword = 'Enter Username & Password';
   static const userName = 'User Name';
   static const password = 'Password';
@@ -12,12 +14,12 @@ abstract class AppString {
   static const aboutUs = 'About Us';
   static const privacyPolicy = 'Privacy Policy';
   static const termAndCondition = 'Term & Condition';
-  static const fuel = 'fuel';
+  static const fuel = 'Fuel';
   static const currentPosition = 'Current Position';
   static const fuelMonitoring = 'Fuel Monitoring';
   static const show = 'Show';
-  static const from = 'from :';
-  static const to = 'to :';
+  static const from = 'From :';
+  static const to = 'To :';
   static const appliedLeave = 'Applied Leave';
   static const leaveApplication = 'Leave Application';
   static const feedback = 'Feedback';
@@ -54,7 +56,7 @@ abstract class AppString {
   static const selectedVehicle = 'Selected Vehicle';
   static const todaysTrack = 'Today\'s Track';
   static const todayTrack = 'Today Track';
-  static const summery = 'SUMMERY';
+
   static const regNo = 'Reg No.';
   static const mileage = 'Mileage';
   static const topSpeed = 'Top Speed';
@@ -118,6 +120,8 @@ abstract class AppString {
   static const vehicle  = 'Vehicle :';
   static const pPetrol  = 'P-Petrol :';
   static const atLeastHalfTank  = 'At Least Half Tank :';
+  static const delayedPassengerSeatBelt = 'Delayed Passenger Seat Belt:';
+
 
 
 }

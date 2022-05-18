@@ -18,20 +18,24 @@ class MarketObservation extends StatelessWidget {
       appBar: const KAppBar(
           title: KText(AppString.marketObservation,
               color: AppColor.white, fontSize: 28.0)),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
-          children: [
-            Container(),
-            const SizedBox(height: 26.0),
-            const KTextFieldNonFloatingLabel(label: AppString.shop),
-            const SizedBox(height: 26.0),
-            const KTextFieldNonFloatingLabel(label: AppString.town),
-            const SizedBox(height: 26.0),
-            const KMultiLineTextField(title: AppString.observation),
-            const SizedBox(height: 26.0),
-            KElevatedButton(string: AppString.save,onTap: (){},width: 80),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Center(
+            child: Column(
+              children: [
+                Container(),
+                const SizedBox(height: 120.0),
+                const KTextFieldNonFloatingLabel(label: AppString.shop),
+                const SizedBox(height: 26.0),
+                const KTextFieldNonFloatingLabel(label: AppString.town),
+                const SizedBox(height: 26.0),
+                const KMultiLineTextField(title: AppString.observation),
+                const SizedBox(height: 35.0),
+                KElevatedButton(string: AppString.save,onTap: (){},width: 90),
+              ],
+            ),
+          ),
         ),
       ),
     );
