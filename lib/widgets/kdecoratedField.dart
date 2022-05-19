@@ -28,7 +28,7 @@ class KDecoratedField extends StatelessWidget {
               filled: true,
               //hintText: 'hintText',
               //errorText:showError?'please select':null,
-              fillColor: Colors.grey[200],
+              fillColor: AppColor.textFieldColor,
               contentPadding:
               const EdgeInsets.symmetric(vertical: 6.0, horizontal: 12.0),
               border: const OutlineInputBorder(
@@ -98,7 +98,7 @@ class KDecoratedFieldRadio extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 8),
         child: KText(label),
       ),
-      tileColor: Colors.grey[200],
+      tileColor: AppColor.textFieldColor,
       subtitle: ValueListenableBuilder<int>(
           valueListenable: radioNotifier,
           builder: (context, value, child) {
@@ -123,6 +123,8 @@ class KDecoratedFieldRadio extends StatelessWidget {
               ],
             );
           }
+
+
       ),
     );
   }

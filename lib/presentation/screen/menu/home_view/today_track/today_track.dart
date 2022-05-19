@@ -94,27 +94,6 @@ class _TodayTrackState extends State<TodayTrack> {
 
             child:  Column(
               children:[
-
-                Container(
-                  height: 45,
-                  width: 45,
-                  child: PhysicalModel(
-                    color: AppColor.black.withOpacity(0.3),
-                    elevation: 6.0,
-                    shadowColor: AppColor.black,
-                    shape: BoxShape.circle,
-                    child:  SizedBox(
-
-                        child: InkWell(
-                          onTap: () {
-                            _showBottomSheet(context);
-                          },
-                          child: const Image(image: ImageString.info),
-                        ),
-                      ),
-                    ),
-                ),
-                const SizedBox(height: 10,),
                 Padding(
                   padding: const EdgeInsets.only(left: 10),
                   child: Chip(
@@ -136,6 +115,28 @@ class _TodayTrackState extends State<TodayTrack> {
                     ),
                   ),
                 ),
+                const SizedBox(height: 10,),
+                Container(
+                  height: 45,
+                  width: 45,
+                  child: PhysicalModel(
+                    color: AppColor.black.withOpacity(0.3),
+                    elevation: 6.0,
+                    shadowColor: AppColor.black,
+                    shape: BoxShape.circle,
+                    child:  SizedBox(
+
+                        child: InkWell(
+                          onTap: () {
+                            _showBottomSheet(context);
+                          },
+                          child: const Image(image: ImageString.info),
+                        ),
+                      ),
+                    ),
+                ),
+
+
            ] ),
 
 

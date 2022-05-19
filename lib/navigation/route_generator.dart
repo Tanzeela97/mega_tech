@@ -30,11 +30,14 @@ class RouteGenerator {
 
     switch (settings.name) {
       case RouteString.initial:
-        return MaterialPageRoute(builder: (_) => const MainLayout());
-          return MaterialPageRoute(builder: (_) => const MainLayout());
+        return MaterialPageRoute(builder: (_) => const SplashView());
+
       case RouteString.login:
         return MaterialPageRoute(builder: (_) => const SignInView());
-        case RouteString.layout:
+      case RouteString.device:
+        return MaterialPageRoute(builder: (_) => const Device());
+
+      case RouteString.layout:
         return MaterialPageRoute(builder: (_) => const MainLayout());
       case RouteString.fuel:
         return MaterialPageRoute(builder: (_) => const FuelMonitoring());
@@ -45,8 +48,7 @@ class RouteGenerator {
 
       case RouteString.adminTrip:
         return MaterialPageRoute(builder: (_) => const AdminTrip());
-      case RouteString.device:
-        return MaterialPageRoute(builder: (_) => const Device());
+
       case RouteString.preInfo:
         return MaterialPageRoute(builder: (_) => const PreInfo());
       case RouteString.marketObservation:

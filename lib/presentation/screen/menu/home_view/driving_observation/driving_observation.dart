@@ -8,6 +8,8 @@ import 'package:megatech/widgets/kText.dart';
 import 'package:megatech/widgets/kTextFieldNonFloatingLabel.dart';
 import 'package:megatech/widgets/kdecoratedField.dart';
 
+import '../../../../../widgets/kElevatedButton.dart';
+
 class DrivingObservation extends StatefulWidget {
   const DrivingObservation({Key? key}) : super(key: key);
 
@@ -21,8 +23,10 @@ class _DrivingObservationState extends State<DrivingObservation> {
   static const _heightBox = SizedBox(height: 20);
   final ValueNotifier<int> radioOne = ValueNotifier(0);
   final ValueNotifier<int> radioTwo = ValueNotifier(0);
-  static const option =  ['Yes', 'No'];
-  static const optionTwo =   ['Good', 'ok', 'No'];
+  static const option = ['Yes', 'No'];
+  static const optionTwo = ['Good', 'ok', 'No'];
+  String dropdownvalue = 'Item 1';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,9 +43,11 @@ class _DrivingObservationState extends State<DrivingObservation> {
                 pageIndex.value = value;
               },
               children: [
+
                 ///pageOne
                 Padding(
-                  padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                  padding: const EdgeInsets.only(
+                      left: 16.0, right: 16.0, top: 40),
                   child: Column(
                     children: [
                       Row(
@@ -82,12 +88,18 @@ class _DrivingObservationState extends State<DrivingObservation> {
                         ],
                       ),
                       _heightBox,
+                      KDecoratedDropDown(
+                          data:, label: AppString.businessGroup, dropDown:),
                       const KTextFieldNonFloatingLabel(
-                          label: AppString.businessGroup),
+                          label: AppString.businessGroup,
+                          iconData: Icons.keyboard_arrow_down),
                       _heightBox,
-                      const KTextFieldNonFloatingLabel(label: AppString.designation),
+                      const KTextFieldNonFloatingLabel(
+                          label: AppString.designation,
+                          iconData: Icons.keyboard_arrow_down),
                       _heightBox,
-                      const KTextFieldNonFloatingLabel(label: AppString.lineManager),
+                      const KTextFieldNonFloatingLabel(
+                          label: AppString.lineManager),
                       _heightBox,
                       const KTextFieldNonFloatingLabel(
                           label: AppString.delayedPassenger),
@@ -96,9 +108,11 @@ class _DrivingObservationState extends State<DrivingObservation> {
                     ],
                   ),
                 ),
+
                 ///pageTwo
                 Padding(
-                  padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                  padding: const EdgeInsets.only(
+                      left: 16.0, right: 16.0, top: 40),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -107,34 +121,48 @@ class _DrivingObservationState extends State<DrivingObservation> {
                       _heightBox,
                       Row(
                         children: [
-                          Expanded(child:  KDecoratedFieldRadio(
-                              radioNotifier: radioOne, data: const ['Yes', 'No'],label: AppString.observeAllSide)),
+                          Expanded(child: KDecoratedFieldRadio(
+                              radioNotifier: radioOne,
+                              data: const ['Yes', 'No'],
+                              label: AppString.observeAllSide)),
                           _widthBox,
-                          Expanded(child:  KDecoratedFieldRadio(
-                              radioNotifier: radioOne, data: const ['Yes', 'No'],label: AppString.fastenSafetyBelt)),
+                          Expanded(child: KDecoratedFieldRadio(
+                              radioNotifier: radioOne,
+                              data: const ['Yes', 'No'],
+                              label: AppString.fastenSafetyBelt)),
                         ],
                       ),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: const ['Yes', 'No'],label: AppString.checkPassengerForSafetyBelt),
+                          radioNotifier: radioOne,
+                          data: const ['Yes', 'No'],
+                          label: AppString.checkPassengerForSafetyBelt),
                       _heightBox,
                       const KText(AppString.turning,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: optionTwo,label: AppString.getsInTheProperLaneInTime),
+                          radioNotifier: radioOne,
+                          data: optionTwo,
+                          label: AppString.getsInTheProperLaneInTime),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: optionTwo,label: AppString.spaceOnCurve),
+                          radioNotifier: radioOne,
+                          data: optionTwo,
+                          label: AppString.spaceOnCurve),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: optionTwo,label: AppString.curvePath),
+                          radioNotifier: radioOne,
+                          data: optionTwo,
+                          label: AppString.curvePath),
                     ],
                   ),
                 ),
+
                 ///pageThree
                 Padding(
-                  padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                  padding: const EdgeInsets.only(
+                      left: 16.0, right: 16.0, top: 40),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -142,58 +170,77 @@ class _DrivingObservationState extends State<DrivingObservation> {
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: optionTwo,label: AppString.isConfident),
+                          radioNotifier: radioOne,
+                          data: optionTwo,
+                          label: AppString.isConfident),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: optionTwo,label: AppString.isRelaxed),
+                          radioNotifier: radioOne,
+                          data: optionTwo,
+                          label: AppString.isRelaxed),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: optionTwo,label: AppString.toleratesBadDriving),
+                          radioNotifier: radioOne,
+                          data: optionTwo,
+                          label: AppString.toleratesBadDriving),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: optionTwo,label: AppString.isConsiderateTo),
+                          radioNotifier: radioOne,
+                          data: optionTwo,
+                          label: AppString.isConsiderateTo),
                       _heightBox,
-                      const KText(AppString.accidents,
+                      const KText(AppString.incidents,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: optionTwo,label: AppString.incidentHappened),
+                          radioNotifier: radioOne,
+                          data: optionTwo,
+                          label: AppString.incidentHappened),
                     ],
                   ),
                 ),
+
                 ///pageFour
                 Padding(
-                  padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                  padding: const EdgeInsets.only(
+                      left: 16.0, right: 16.0, top: 40),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const     KText(AppString.beforeDriving,
+                      const KText(AppString.lastMonthsObservation,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
-                      const    KMultiLineTextField(title: AppString.whatWasTheLastMonthsObservation),
+                      const KMultiLineTextField(
+                          title: AppString.whatWasTheLastMonthsObservation),
                       _heightBox,
-                      const   KText(AppString.improvement,
+                      const KText(AppString.improvement,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: optionTwo,label: AppString.isThereAnyImprovementInLastMonthObservation),
+                          radioNotifier: radioOne,
+                          data: optionTwo,
+                          label: AppString
+                              .isThereAnyImprovementInLastMonthObservation),
                       _heightBox,
-                      const   KText(AppString.otherObservation,
+                      const KText(AppString.otherObservation,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
-                      const    KMultiLineTextField(title: AppString.anyOtherObservation),
+                      const KMultiLineTextField(
+                          title: AppString.anyOtherObservation),
                     ],
                   ),
                 ),
+
                 ///pageFive
                 Padding(
-                  padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                  padding: const EdgeInsets.only(
+                      left: 16.0, right: 16.0, top: 40),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
-                        children:const [
+                        children: const [
                           KText(AppString.caution,
                               fontSize: 24, enumText: EnumText.bold),
                           _widthBox,
@@ -201,55 +248,75 @@ class _DrivingObservationState extends State<DrivingObservation> {
                         ],
                       ),
                       _heightBox,
-                      const    KMultiLineTextField(title: ''),
+                      const KMultiLineTextField(title: ''),
                       _heightBox,
-                      const   KText(AppString.distance,
+                      const KText(AppString.distance,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: option,label: AppString.maintainingThreeSecondDistance),
+                          radioNotifier: radioOne,
+                          data: option,
+                          label: AppString.maintainingThreeSecondDistance),
                       _heightBox,
-                      const   KText(AppString.inspection,
+                      const KText(AppString.inspection,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: option,label: AppString.carInspectionBeforeStartingAJourney),
+                          radioNotifier: radioOne,
+                          data: option,
+                          label: AppString.carInspectionBeforeStartingAJourney),
                       _heightBox,
-                      const   KText(AppString.safeDistanceFront,
+                      const KText(AppString.safeDistanceFront,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: option,label: AppString.maintainingSafeDistanceFromOtherVehiclesFront),
+                          radioNotifier: radioOne,
+                          data: option,
+                          label: AppString
+                              .maintainingSafeDistanceFromOtherVehiclesFront),
                     ],
                   ),
                 ),
+
                 ///pageSix
                 Padding(
-                  padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 40),
+                  padding: const EdgeInsets.only(
+                      left: 16.0, right: 16.0, top: 40),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const  KText(AppString.safeDistanceSide,
+                      const KText(AppString.safeDistanceSide,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: option,label: AppString.maintainingSafeDistanceFromOtherVehiclesSide),
+                          radioNotifier: radioOne,
+                          data: option,
+                          label: AppString
+                              .maintainingSafeDistanceFromOtherVehiclesSide),
                       _heightBox,
-                      const   KText(AppString.safeDistanceBack,
+                      const KText(AppString.safeDistanceBack,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: option,label: AppString.maintainingSafeDistanceFromOtherVehiclesBack),
+                          radioNotifier: radioOne,
+                          data: option,
+                          label: AppString
+                              .maintainingSafeDistanceFromOtherVehiclesBack),
                       _heightBox,
-                      const   KText(AppString.breaks,
+                      const KText(AppString.brakes,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
                       KDecoratedFieldRadio(
-                          radioNotifier: radioOne, data: option,label: AppString.distanceMaintainBeforePressingBreak),
-                      const   KText(AppString.comments,
+                          radioNotifier: radioOne,
+                          data: option,
+                          label: AppString.distanceMaintainBeforePressingBreak),
+                      const KText(AppString.comments,
                           fontSize: 24, enumText: EnumText.bold),
                       _heightBox,
-                      const   KMultiLineTextField(title: AppString.description),
+                      const KMultiLineTextField(title: AppString.description),
+                      _heightBox,
+                      Center(child: KElevatedButton(
+                        string: AppString.complete, onTap: () {}, width: 180,))
                     ],
                   ),
                 ),
@@ -258,17 +325,18 @@ class _DrivingObservationState extends State<DrivingObservation> {
           ),
           ValueListenableBuilder<int>(
               valueListenable: pageIndex,
-              builder: (_, value, child) => Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  pageIndicator(0 == value),
-                  pageIndicator(1 == value),
-                  pageIndicator(2 == value),
-                  pageIndicator(3 == value),
-                  pageIndicator(4 == value),
-                  pageIndicator(5 == value),
-                ],
-              ))
+              builder: (_, value, child) =>
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      pageIndicator(0 == value),
+                      pageIndicator(1 == value),
+                      pageIndicator(2 == value),
+                      pageIndicator(3 == value),
+                      pageIndicator(4 == value),
+                      pageIndicator(5 == value),
+                    ],
+                  ))
         ],
       ),
     );
@@ -277,8 +345,8 @@ class _DrivingObservationState extends State<DrivingObservation> {
   Widget pageIndicator(bool isActive) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 500),
-      height: 18,
-      width: 18,
+      height: 14,
+      width: 14,
       margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 6),
       decoration: BoxDecoration(
           shape: BoxShape.circle,

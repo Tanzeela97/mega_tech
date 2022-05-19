@@ -27,8 +27,8 @@ class _VehicleObservationState extends State<VehicleObservation> {
   Widget pageIndicator(bool isActive) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 500),
-      height: 18,
-      width: 18,
+      height: 14,
+      width: 14,
       margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 6),
       decoration: BoxDecoration(
           shape: BoxShape.circle,
@@ -42,7 +42,10 @@ class _VehicleObservationState extends State<VehicleObservation> {
   static const _heightBox = SizedBox(height: 20);
   static const option = ['Yes', 'No'];
   static const optionTwo = ['Good', 'ok', 'No'];
+  String dropdownvalue = 'Item 1';
+  var items = [
 
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,9 +113,10 @@ class _VehicleObservationState extends State<VehicleObservation> {
                               ),
                             ],
                           ),
+
                           _heightBox,
                           const KTextFieldNonFloatingLabel(
-                              label: AppString.businessGroup),
+                              label: AppString.businessGroup,iconData: Icons.keyboard_arrow_down,),
                           _heightBox,
                           const KTextFieldNonFloatingLabel(
                               label: AppString.designation),

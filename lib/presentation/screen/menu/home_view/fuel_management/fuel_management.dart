@@ -68,8 +68,8 @@ class _FuelManagementState extends State<FuelManagement> {
                 imageProvider: ImageString.fuelPrice),
             _heightBox,
             _tile(string: 'Litre', imageProvider: ImageString.fuelTwo),
-            _heightBox,
-            Center(child: const KElevatedButton(string: AppString.saveFilling))
+          const SizedBox(height: 50,),
+             Center(child: KElevatedButton(string: AppString.saveFilling,onTap: (){},width: 180,))
           ],
         ),
       ),

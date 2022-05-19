@@ -45,7 +45,7 @@ class _SignInViewState extends State<SignInView> {
             const KTextField(label: AppString.password),
             const SizedBox(height: 45.0),
             KElevatedButton(string: AppString.signIn,onTap: (){
-              Navigator.pushReplacementNamed(context, RouteString.layout);
+              Navigator.pushReplacementNamed(context, RouteString.device);
 
             }),
 

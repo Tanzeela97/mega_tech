@@ -54,7 +54,7 @@ class _TrackingReportState extends State<TrackingReport> {
       ListTile(
           leading: Image(image: imageProvider, height: 32),
           title: KText(string, fontSize: 24),
-          tileColor: Colors.grey[200],
+          tileColor: AppColor.textFieldColor,
           onTap: onTap,
           shape: RoundedRectangleBorder(
               side: BorderSide.none,

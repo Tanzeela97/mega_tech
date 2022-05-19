@@ -45,7 +45,7 @@ abstract class AppString {
   static const dayStart = 'Day Start';
   static const device = 'Devices';
   static const driver = 'DRIVER';
-  static const date = 'Date';
+  static const date = 'Date:';
   static const currentLocation = 'CURRENT LOCATION';
   static const preInfo = 'Pre-Info';
   static const infoRemarks = 'Info Remarks';
@@ -91,7 +91,7 @@ abstract class AppString {
   static const isRelaxed = 'Is Relaxed';
   static const toleratesBadDriving = 'Tolerates Bad Driving Of Others';
   static const isConsiderateTo = 'Is Considerate To Pedestrians';
-  static const accidents = 'Accidents';
+  static const incidents = 'Incidents';
   static const incidentHappened =
       'Is There Any Incident Happened in this month';
   static const lastMonthsObservation = 'Last Month\'s Observation';
@@ -106,7 +106,7 @@ abstract class AppString {
   static const safeDistanceSide = 'Safe Distance Side';
   static const safeDistanceBack = 'Safe Distance Back';
   static const safeDistanceFront = 'Safe Distance Front';
-  static const breaks = 'Breaks';
+  static const brakes = 'Brakes';
   static const comments = 'Comments';
 
   static const maintainingSafeDistanceFromOtherVehiclesFront =
