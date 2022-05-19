@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:megatech/constant/app_string.dart';
 import 'package:megatech/constant/image_string.dart';
 import 'package:megatech/constant/route_string.dart';
+import 'package:megatech/source/core/api_client.dart';
+import 'package:megatech/source/data_source/remote_data_source.dart';
 import 'package:megatech/widgets/kElevatedButton.dart';
 import 'package:megatech/widgets/kText.dart';
 import 'package:megatech/widgets/kTextField.dart';
@@ -44,9 +47,10 @@ class _SignInViewState extends State<SignInView> {
             const SizedBox(height: 10.0),
             const KTextField(label: AppString.password),
             const SizedBox(height: 45.0),
-            KElevatedButton(string: AppString.signIn,onTap: (){
-              Navigator.pushReplacementNamed(context, RouteString.device);
-
+            KElevatedButton(string: AppString.signIn,onTap: ()async{
+             // Navigator.pushReplacementNamed(context, RouteString.device);
+              final IRemoteDataSource remoteDate = RemoteDataSource(ApiClient(Client()));
+             await remoteDate.getLogin('name', 'password');
             }),
 
           ],
