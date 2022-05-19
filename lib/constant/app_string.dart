@@ -179,7 +179,8 @@ abstract class AppString {
   static const areAllSeatBeltsInGoodWorkingConditions =
       "Are All Seat Belts In Good Working Conditions ?";
 
-  static const complete = " Complete";
-  static const avgSpeedTrip = " Avg. Speed/Trip";
-  static const totalMileage = " Total Mileage";
+  static const complete = "Complete";
+  static const avgSpeedTrip = "Avg. Speed/Trip";
+  static const totalMileage = "Total Mileage";
+  static const view = "View";
 }
