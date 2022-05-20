@@ -30,7 +30,7 @@ class _TrackHistoryState extends State<TrackHistory> {
       tilt: 59.440717697143555,
       zoom: 19.151926040649414);
   final Completer<GoogleMapController> _controller = Completer();
-  final timeDateBloc = injector<DateTimePickerBloc>();
+  final timeDateBloc = sl<DateTimePickerBloc>();
   @override
   void initState() {
     timeDateBloc.add(PickDate(context: context));

@@ -22,8 +22,8 @@ class Leave extends StatefulWidget {
 }
 
 class _LeaveState extends State<Leave> {
-  final fromBloc = injector<DateTimePickerBloc>();
-  final toBloc = injector<DateTimePickerBloc>();
+  final fromBloc = sl<DateTimePickerBloc>();
+  final toBloc = sl<DateTimePickerBloc>();
 
   ValueNotifier<String> valueNotifier =ValueNotifier('');
   @override

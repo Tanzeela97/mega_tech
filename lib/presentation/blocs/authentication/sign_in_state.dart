@@ -18,6 +18,7 @@ class SignInLoaded extends SignInState {
   const SignInLoaded({required this.loginModel});
 }
 
+
 class SignInError extends SignInState {
   final String message;
   const SignInError({required this.message});

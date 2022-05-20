@@ -19,8 +19,8 @@ class FuelMonitoring extends StatefulWidget {
 }
 
 class _FuelMonitoringState extends State<FuelMonitoring> {
-  final fromBloc = injector<DateTimePickerBloc>();
-  final toBloc = injector<DateTimePickerBloc>();
+  final fromBloc = sl<DateTimePickerBloc>();
+  final toBloc = sl<DateTimePickerBloc>();
 
   @override
   Widget build(BuildContext context) {

@@ -22,8 +22,8 @@ class PreInfo extends StatefulWidget {
 
 class _PreInfoState extends State<PreInfo> {
   ValueNotifier<String> valueNotifier = ValueNotifier('');
-  final fromBloc = injector<DateTimePickerBloc>();
-  final toBloc = injector<DateTimePickerBloc>();
+  final fromBloc = sl<DateTimePickerBloc>();
+  final toBloc = sl<DateTimePickerBloc>();
 
   @override
   Widget build(BuildContext context) {

@@ -20,8 +20,8 @@ class TripV extends StatefulWidget {
 }
 
 class _TripVState extends State<TripV> {
-  final fromBloc = injector<DateTimePickerBloc>();
-  final toBloc = injector<DateTimePickerBloc>();
+  final fromBloc = sl<DateTimePickerBloc>();
+  final toBloc = sl<DateTimePickerBloc>();
 
   @override
   Widget build(BuildContext context) {

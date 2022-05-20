@@ -34,6 +34,10 @@ class KTextField extends StatelessWidget {
                 //   borderSide:
                 //   BorderSide(width: 1, color: Colors.transparent,style: BorderStyle.none),
                 // ),
+                errorBorder:  const OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                    borderSide:
+                    BorderSide(width: 1, color: Colors.transparent)),
                 enabledBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(16.0)),
                   borderSide: BorderSide(width: 1, color: Colors.transparent),

@@ -9,15 +9,15 @@ abstract class IRemoteDataSource {
 }
 
 class RemoteDataSource extends IRemoteDataSource {
-  final ApiClient _apiClient;
+  final ApiClient apiClient;
 
-  const RemoteDataSource(this._apiClient);
+  const RemoteDataSource({required this.apiClient});
 
   @override
   Future<LoginModel> getLogin(String name, String password) async {
     var uri = Uri.https(ApiString.baseUrl, ApiString.getLogin);
 
-    final response = await _apiClient
+    final response = await apiClient
         .post(uri, params: {"userID": "khalid", "pass": "khalid@123"});
     print(response);
     return LoginModel.fromJson(response);

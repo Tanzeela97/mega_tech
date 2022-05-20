@@ -14,8 +14,9 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
+    //todo 10 sec
     Timer(
-        const Duration(seconds: 10),
+        const Duration(seconds: 1),
             () =>Navigator.pushReplacementNamed(context, RouteString.login));
     super.initState();
   }

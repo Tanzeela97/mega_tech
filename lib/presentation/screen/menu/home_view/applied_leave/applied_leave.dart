@@ -12,8 +12,8 @@ import '../../../../../dependency_injection.dart';
 import '../../../../blocs/date_time_picker/date_time_picker_bloc.dart';
 
 class AppliedLeave extends StatelessWidget {
-  final fromBloc = injector<DateTimePickerBloc>();
-  final toBloc = injector<DateTimePickerBloc>();
+  final fromBloc = sl<DateTimePickerBloc>();
+  final toBloc = sl<DateTimePickerBloc>();
 
   AppliedLeave({Key? key}) : super(key: key);
 

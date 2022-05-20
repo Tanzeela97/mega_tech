@@ -12,8 +12,8 @@ abstract class ISignedInRepository {
 }
 
 class SignedInRepository extends ISignedInRepository {
-  final RemoteDataSource remoteDataSource;
-  final LocalDataSource localDataSource;
+  final IRemoteDataSource remoteDataSource;
+  final ILocalDataSource localDataSource;
 
   const SignedInRepository(
       {required this.localDataSource, required this.remoteDataSource});
@@ -22,6 +22,7 @@ class SignedInRepository extends ISignedInRepository {
   Future<Either<Failure, SessionModel>> getSession() async{
     try {
       final session = await localDataSource.getSession();
+      print('session:::${session.id}');
       return Right(session);
     } on CacheException {
       return const Left(CacheFailure());

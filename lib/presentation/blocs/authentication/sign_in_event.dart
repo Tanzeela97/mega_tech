@@ -12,6 +12,3 @@ class GetLogin extends SignInEvent {
   const GetLogin({required this.name, required this.password});
 }
 
-class GetSession extends SignInEvent {
-  const GetSession();
-}

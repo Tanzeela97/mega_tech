@@ -21,8 +21,8 @@ class VehicleObservation extends StatefulWidget {
 }
 
 class _VehicleObservationState extends State<VehicleObservation> {
-  final lastDate = injector<DateTimePickerBloc>();
-  final lastObservation = injector<DateTimePickerBloc>();
+  final lastDate = sl<DateTimePickerBloc>();
+  final lastObservation = sl<DateTimePickerBloc>();
 
   Widget pageIndicator(bool isActive) {
     return AnimatedContainer(
